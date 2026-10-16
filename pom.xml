@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>fr.openent</groupId>
+        <artifactId>app-parent</artifactId>
+        <version>1.2.0</version>
+    </parent>
+
+    <groupId>fr.openent</groupId>
+    <artifactId>openbadges</artifactId>
+    <version>0.1.0</version>
+
+    <name>Open ENT Open Badges</name>
+    <description>
+        Open Badges 3.0 (1EdTech) : Open ENT émetteur d'attestations vérifiables, signées en
+        VC-JWT et contrôlables hors de la plateforme.
+    </description>
+
+    <scm>
+        <connection>scm:git:https://github.com/open-ent/openbadges.git</connection>
+        <developerConnection>scm:git:https://github.com/open-ent/openbadges.git</developerConnection>
+        <url>https://github.com/open-ent/openbadges</url>
+    </scm>
+
+    <repositories>
+        <repository>
+            <id>ode</id>
+            <name>ODE Repository</name>
+            <url>https://maven.opendigitaleducation.com/nexus/content/groups/public</url>
+        </repository>
+        <repository>
+            <id>pt-releases</id>
+            <name>rct-nexus maven-releases (entcore-libs patchées)</name>
+            <url>https://rct-nexus.tech.fr/repository/maven-releases/</url>
+        </repository>
+    </repositories>
+
+    <properties>
+        <!-- Bibliothèques entcore patchées, alignées sur le socle déployé (cf. oneroster). -->
+        <entCoreLibsVersion>6.16.8-patched</entCoreLibsVersion>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.vertx</groupId>
+            <artifactId>vertx-core</artifactId>
+            <version>${vertxVersion}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.entcore</groupId>
+            <artifactId>common</artifactId>
+            <version>${entCoreLibsVersion}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+</project>

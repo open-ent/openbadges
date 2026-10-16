@@ -1,0 +1,28 @@
+    {
+      "name": "fr.openent~openbadges~${openBadgesVersion}",
+      "config": {
+        "main" : "fr.openent.openbadges.OpenBadges",
+        "port" : 8173,
+        "app-name" : "OpenBadges",
+        "app-address" : "/openbadges",
+        "app-type" : "SYSTEM",
+        "host": "${host}",
+        "ssl" : $ssl,
+        "auto-redeploy": false,
+        "userbook-host": "${host}",
+        "integration-mode" : "HTTP",
+        "app-registry.port" : 8012,
+        "mode" : "${mode}",
+        "entcore.port" : 8009,
+        "sql" : true,
+        "mongodb" : false,
+        "db-schema" : "openbadges",
+        "openbadges" : {
+          "issuer" : "${host}",
+          "private-key" : "${openBadgesPrivateKeyPem}",
+          "kid" : "${openBadgesKid}",
+          "access-token-ttl-seconds" : 3600,
+          "max-limit" : 500
+        }
+      }
+    }
