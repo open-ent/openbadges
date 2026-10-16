@@ -9,6 +9,7 @@ import fr.openent.openbadges.security.Authenticator;
 import fr.openent.openbadges.security.KeyManager;
 import fr.openent.openbadges.service.BadgeRepository;
 import fr.openent.openbadges.service.ClientRepository;
+import fr.openent.openbadges.service.DirectoryService;
 import io.vertx.core.Future;
 import io.vertx.core.Vertx;
 import io.vertx.core.eventbus.EventBus;
@@ -30,6 +31,7 @@ public class OpenBadgesContext {
 	public final RevocationList revocations;
 	public final ClientRepository clients = new ClientRepository();
 	public final BadgeRepository badges = new BadgeRepository();
+	public final DirectoryService directory = new DirectoryService();
 	public final Authenticator auth;
 
 	public OpenBadgesContext(Vertx vertx, EventBus eb, JsonObject config) {

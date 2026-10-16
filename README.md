@@ -64,6 +64,36 @@ fr.openent.openbadges
     └── AdminController      /openbadges/admin — émetteurs, badges, clients, délivrance
 ```
 
+## Un émetteur par établissement
+
+Un **badge** (`Achievement`) est une définition, créée une fois. Une **attestation**
+(`AchievementCredential`) est décernée par un **établissement**. La norme distingue les deux —
+l'`Achievement` a un créateur, la credential a un `issuer` — et le module aussi : l'attestation
+porte son propre `issuer_id`, celui de l'établissement, et non celui du badge.
+
+Sans cette séparation, un badge défini une fois ne pourrait être décerné qu'au nom d'un seul
+émetteur, et il faudrait le redéfinir pour chacun des établissements.
+
+L'émetteur d'un établissement est **créé à la volée** à la première délivrance, depuis
+l'annuaire : son nom en vient, et un établissement n'a pas à être saisi deux fois. Pour les
+créer tous d'avance :
+
+```
+POST /openbadges/admin/issuers/sync
+```
+
+Idempotent, et restreint aux **établissements d'enseignement qui ont au moins un usager** : sur
+une instance réelle, cela ramène 534 structures de l'annuaire à 360 établissements — l'annuaire
+national verse aussi des circonscriptions, des inspections et des services de budget, qui ne
+décerneront jamais de badge. Un établissement renommé voit son émetteur suivre **sans changer
+d'identifiant** : celui-ci est inscrit dans les attestations déjà délivrées et ne doit jamais
+bouger.
+
+Au moment de délivrer, l'établissement est celui que la requête désigne (`structureId`). S'il
+n'est pas précisé et que l'enseignant n'en a qu'un, c'est celui-là ; s'il en a plusieurs, la
+délivrance est **refusée** plutôt que devinée — signer au nom du mauvais établissement
+produirait une attestation fausse qu'on ne pourrait pas distinguer d'une vraie.
+
 ## Droits
 
 Deux niveaux, et la distinction est volontaire.

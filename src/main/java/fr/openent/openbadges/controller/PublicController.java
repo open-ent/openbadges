@@ -65,7 +65,8 @@ public class PublicController extends BaseController {
 					return repository.achievement(credential.getString("achievement_id"))
 							.compose(achievement -> achievement == null
 									? Future.failedFuture(BadgeException.notFound("achievement"))
-									: repository.issuer(achievement.getString("issuer_id"))
+									// L'émetteur de l'attestation, pas celui du badge.
+									: repository.issuer(credential.getString("issuer_id"))
 											.map(issuer -> ctx.credentials.credential(credential,
 													achievement, issuer)
 													.put("__revoked", credential.getBoolean("revoked", false))));

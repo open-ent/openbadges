@@ -93,6 +93,29 @@ public class CredentialsTest {
 		assertEquals("Badge", achievement.getString("achievementType"));
 	}
 
+	@Test
+	public void l_emetteur_de_l_attestation_n_est_pas_le_proprietaire_du_badge() {
+		// Un badge est défini une fois par la plateforme et décerné par chaque établissement en
+		// son nom : la norme distingue le créateur d'un Achievement de l'issuer d'une
+		// AchievementCredential. Recâbler l'émetteur sur celui du badge obligerait à redéfinir
+		// chaque badge pour chacun des établissements.
+		JsonObject college = new JsonObject()
+				.put("id", "55555555-5555-4555-8555-555555555555")
+				.put("name", "Collège Jean Moulin");
+		JsonObject credential = credentials.credential(credentialRow(), achievementRow(), college);
+
+		assertEquals("Collège Jean Moulin", credential.getJsonObject("issuer").getString("name"));
+		assertEquals(BASE + "/openbadges/issuers/55555555-5555-4555-8555-555555555555",
+				credential.getJsonObject("issuer").getString("id"));
+		// Le badge, lui, reste le même objet partagé.
+		assertEquals(BASE + "/openbadges/achievements/" + ACHIEVEMENT,
+				credential.getJsonObject("credentialSubject").getJsonObject("achievement")
+						.getString("id"));
+		// Et la liste de révocation est celle de l'établissement qui a délivré.
+		assertTrue(credential.getJsonObject("credentialStatus").getString("id")
+				.startsWith(BASE + "/openbadges/revocations/55555555-5555-4555-8555-555555555555#"));
+	}
+
 	// ------------------------------------------------------------------ identité
 
 	@Test

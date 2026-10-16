@@ -29,6 +29,7 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -171,15 +172,83 @@ public class AdminController extends BaseController {
 				if (achievement == null) {
 					return Future.<JsonObject>failedFuture(BadgeException.notFound("achievement"));
 				}
-				return repository.issuer(achievement.getString("issuer_id")).compose(issuer -> {
-					if (issuer == null) {
-						return Future.<JsonObject>failedFuture(BadgeException.notFound("issuer"));
-					}
-					return sign(body, achievement, issuer, user.getUserId());
-				});
+				// L'émetteur est l'ÉTABLISSEMENT qui décerne, pas le propriétaire du badge :
+				// un badge est défini une fois et décerné par chacun en son nom.
+				return issuerFor(body, user).compose(issuer ->
+						sign(body, achievement, issuer, user.getUserId()));
 			});
 		}))
 				.onSuccess(result -> Http.json(request, 201, result))
+				.onFailure(error -> Http.error(request, error));
+	}
+
+	/**
+	 * L'émetteur au nom duquel on délivre.
+	 *
+	 * <p>L'établissement est celui que la requête désigne. S'il n'est pas précisé et que
+	 * l'enseignant n'en a qu'un, c'est celui-là ; s'il en a plusieurs, on <strong>refuse</strong>
+	 * plutôt que de choisir — signer au nom du mauvais établissement produirait une attestation
+	 * fausse que personne ne pourrait distinguer d'une vraie.</p>
+	 *
+	 * <p>L'émetteur est créé à la volée s'il n'existe pas encore : un établissement de
+	 * l'annuaire n'a pas à être saisi deux fois.</p>
+	 */
+	private Future<JsonObject> issuerFor(JsonObject body, UserInfos user) {
+		final String declared = body.getString("structureId");
+		if (!blank(declared)) {
+			return ensureIssuer(declared, user.getUserId());
+		}
+		return ctx.directory.structuresOf(user.getUserId()).compose(structures -> {
+			if (structures.isEmpty()) {
+				return Future.<JsonObject>failedFuture(
+						new BadgeException("no.structure.for.user"));
+			}
+			if (structures.size() > 1) {
+				return Future.<JsonObject>failedFuture(
+						new BadgeException("structureId.required.several.structures"));
+			}
+			return ensureIssuer(structures.getJsonObject(0).getString("id"), user.getUserId());
+		});
+	}
+
+	private Future<JsonObject> ensureIssuer(String structureId, String userId) {
+		return repository.issuerOfStructure(structureId).compose(existing -> {
+			if (existing != null) {
+				return Future.succeededFuture(existing);
+			}
+			return ctx.directory.structure(structureId).compose(structure -> {
+				if (structure == null) {
+					return Future.<JsonObject>failedFuture(BadgeException.notFound("structure"));
+				}
+				return repository.upsertIssuerForStructure(UUID.randomUUID().toString(),
+						structureId, structure.getString("name"), ctx.publicBase, userId);
+			});
+		});
+	}
+
+	/**
+	 * Crée l'émetteur de chaque établissement d'enseignement peuplé.
+	 *
+	 * <p>Idempotent : relançable, et un établissement renommé dans l'annuaire voit son émetteur
+	 * suivre sans changer d'identifiant — celui-ci est inscrit dans les attestations déjà
+	 * délivrées et ne doit jamais bouger.</p>
+	 */
+	@Post("/admin/issuers/sync")
+	@ResourceFilter(SuperAdminFilter.class)
+	@SecuredAction(value = "", type = ActionType.RESOURCE)
+	public void syncIssuers(HttpServerRequest request) {
+		user(request).compose(user -> ctx.directory.teachingStructures().compose(structures -> {
+			final List<Future> creations = new ArrayList<Future>();
+			for (int i = 0; i < structures.size(); i++) {
+				final JsonObject structure = structures.getJsonObject(i);
+				creations.add(repository.upsertIssuerForStructure(UUID.randomUUID().toString(),
+						structure.getString("id"), structure.getString("name"), ctx.publicBase,
+						user.getUserId()));
+			}
+			return io.vertx.core.CompositeFuture.join(creations)
+					.map(v -> new JsonObject().put("structures", structures.size()));
+		}))
+				.onSuccess(result -> Http.json(request, 200, result))
 				.onFailure(error -> Http.error(request, error));
 	}
 
@@ -193,6 +262,7 @@ public class AdminController extends BaseController {
 		final JsonObject row = new JsonObject()
 				.put("id", id)
 				.put("achievement_id", achievement.getString("id"))
+				.put("issuer_id", issuer.getString("id"))
 				.put("subject_user_id", body.getString("userId"))
 				.put("name", body.getString("name", achievement.getString("name")))
 				.put("narrative", body.getValue("narrative"))
@@ -223,15 +293,14 @@ public class AdminController extends BaseController {
 					if (row == null) {
 						return Future.<JsonObject>failedFuture(BadgeException.notFound("credential"));
 					}
-					// L'adresse de la liste où le vérificateur ira constater la révocation : elle
-					// appartient à l'émetteur du badge, qu'il faut donc retrouver.
-					return repository.achievement(row.getString("achievement_id"))
-							.map(achievement -> new JsonObject()
-									.put("id", ctx.uris.credential(row.getString("id")))
-									.put("revoked", Boolean.TRUE)
-									.put("revocationReason", row.getString("revoked_reason"))
-									.put("revocationList", achievement == null ? null
-											: ctx.uris.revocationList(achievement.getString("issuer_id"))));
+					// La liste où le vérificateur ira constater la révocation est celle de
+					// l'établissement qui a délivré — l'émetteur porté par l'attestation.
+					return Future.succeededFuture(new JsonObject()
+							.put("id", ctx.uris.credential(row.getString("id")))
+							.put("revoked", Boolean.TRUE)
+							.put("revocationReason", row.getString("revoked_reason"))
+							.put("revocationList",
+									ctx.uris.revocationList(row.getString("issuer_id"))));
 				})
 				.onSuccess(result -> Http.json(request, 200, result))
 				.onFailure(error -> Http.error(request, error));

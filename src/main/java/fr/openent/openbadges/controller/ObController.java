@@ -136,7 +136,9 @@ public class ObController extends BaseController {
 			loads.add(repository.achievement(credential.getString("achievement_id"))
 					.compose(achievement -> achievement == null
 							? Future.succeededFuture(null)
-							: repository.issuer(achievement.getString("issuer_id"))
+							// L'émetteur de l'attestation, pas celui du badge : c'est
+							// l'établissement qui a décerné qui apparaît dans ce qu'on rend.
+							: repository.issuer(credential.getString("issuer_id"))
 									.map(issuer -> ctx.credentials.credential(credential, achievement, issuer)))
 					.map(object -> {
 						if (object != null) {

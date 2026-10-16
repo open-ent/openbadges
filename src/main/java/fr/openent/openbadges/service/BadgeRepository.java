@@ -15,9 +15,10 @@ public class BadgeRepository {
 	private static final String ACHIEVEMENT_COLUMNS = "id, issuer_id, name, description, "
 			+ "achievement_type, criteria_narrative, criteria_url, image_url, tags, alignments, "
 			+ "created_by, created_at";
-	private static final String CREDENTIAL_COLUMNS = "id, achievement_id, subject_user_id, name, "
-			+ "narrative, identity_type, identity_hash, identity_salt, valid_from, valid_until, "
-			+ "jws, revoked, revoked_reason, revoked_at, created_by, created_at";
+	private static final String CREDENTIAL_COLUMNS = "id, achievement_id, issuer_id, "
+			+ "subject_user_id, name, narrative, identity_type, identity_hash, identity_salt, "
+			+ "valid_from, valid_until, jws, revoked, revoked_reason, revoked_at, created_by, "
+			+ "created_at";
 
 	// ------------------------------------------------------------------ émetteurs
 
@@ -29,6 +30,30 @@ public class BadgeRepository {
 	public Future<JsonObject> issuer(String id) {
 		return Db.sqlOne("SELECT " + ISSUER_COLUMNS + " FROM openbadges.issuer WHERE id = ?",
 				new JsonArray().add(id));
+	}
+
+	/** L'émetteur d'un établissement, ou {@code null} s'il n'a pas encore été créé. */
+	public Future<JsonObject> issuerOfStructure(String structureId) {
+		return Db.sqlOne("SELECT " + ISSUER_COLUMNS + " FROM openbadges.issuer "
+				+ "WHERE structure_id = ?", new JsonArray().add(structureId));
+	}
+
+	/**
+	 * Crée l'émetteur d'un établissement, ou met son nom à jour s'il existe déjà.
+	 *
+	 * <p>Idempotent, et c'est ce qui compte : la synchronisation peut être relancée autant de
+	 * fois qu'on veut, et un établissement renommé dans l'annuaire voit son émetteur suivre —
+	 * sans que son identifiant change, puisque c'est lui qui est inscrit dans les attestations
+	 * déjà délivrées.</p>
+	 */
+	public Future<JsonObject> upsertIssuerForStructure(String id, String structureId, String name,
+													   String url, String userId) {
+		return Db.sqlOne("INSERT INTO openbadges.issuer (id, name, url, structure_id, created_by) "
+				+ "VALUES (?, ?, ?, ?, ?) "
+				+ "ON CONFLICT (structure_id) WHERE structure_id IS NOT NULL "
+				+ "DO UPDATE SET name = EXCLUDED.name "
+				+ "RETURNING " + ISSUER_COLUMNS,
+				new JsonArray().add(id).add(name).add(url).add(structureId).add(userId));
 	}
 
 	public Future<JsonObject> createIssuer(String id, JsonObject issuer, String userId) {
@@ -94,12 +119,13 @@ public class BadgeRepository {
 	}
 
 	public Future<JsonObject> insertCredential(JsonObject credential) {
-		return Db.sqlOne("INSERT INTO openbadges.credential (id, achievement_id, subject_user_id, "
-				+ "name, narrative, identity_type, identity_hash, identity_salt, valid_from, "
-				+ "valid_until, jws, created_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?::timestamp, "
-				+ "?::timestamp, ?, ?) RETURNING " + CREDENTIAL_COLUMNS,
+		return Db.sqlOne("INSERT INTO openbadges.credential (id, achievement_id, issuer_id, "
+				+ "subject_user_id, name, narrative, identity_type, identity_hash, identity_salt, "
+				+ "valid_from, valid_until, jws, created_by) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, "
+				+ "?::timestamp, ?::timestamp, ?, ?) RETURNING " + CREDENTIAL_COLUMNS,
 				new JsonArray().add(credential.getString("id"))
 						.add(credential.getString("achievement_id"))
+						.add(credential.getString("issuer_id"))
 						.add(credential.getString("subject_user_id"))
 						.add(credential.getValue("name"))
 						.add(credential.getValue("narrative"))
@@ -124,11 +150,15 @@ public class BadgeRepository {
 				new JsonArray().add(reason).add(id));
 	}
 
-	/** Les attestations révoquées d'un émetteur, pour sa liste de révocation. */
+	/**
+	 * Les attestations révoquées d'un émetteur, pour sa liste de révocation.
+	 *
+	 * <p>Sur l'émetteur de l'attestation, et non sur celui du badge : c'est l'établissement qui
+	 * a délivré qui retire, et c'est sa liste que le vérificateur consulte.</p>
+	 */
 	public Future<JsonArray> revokedOf(String issuerId) {
-		return Db.sql("SELECT c.id, c.revoked_reason FROM openbadges.credential c "
-				+ "JOIN openbadges.achievement a ON a.id = c.achievement_id "
-				+ "WHERE a.issuer_id = ? AND c.revoked ORDER BY c.revoked_at DESC",
+		return Db.sql("SELECT id, revoked_reason FROM openbadges.credential "
+				+ "WHERE issuer_id = ? AND revoked ORDER BY revoked_at DESC",
 				new JsonArray().add(issuerId));
 	}
 
