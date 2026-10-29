@@ -40,7 +40,7 @@ public class DirectoryService {
 
 	/** Un établissement précis, ou {@code null}. */
 	public Future<JsonObject> structure(String structureId) {
-		return query("MATCH (s:Structure {id:{id}}) RETURN s.id AS id, s.name AS name, s.UAI AS uai",
+		return query("MATCH (s:Structure {id:$id}) RETURN s.id AS id, s.name AS name, s.UAI AS uai",
 				new JsonObject().put("id", structureId))
 				.map(rows -> rows.isEmpty() ? null : rows.getJsonObject(0));
 	}
@@ -52,7 +52,7 @@ public class DirectoryService {
 	 * établissements doit préciser lequel : deviner lui ferait signer au nom du mauvais.</p>
 	 */
 	public Future<JsonArray> structuresOf(String userId) {
-		return query("MATCH (u:User {id:{id}})-[:IN]->(:ProfileGroup)-[:DEPENDS]->(s:Structure) "
+		return query("MATCH (u:User {id:$id})-[:IN]->(:ProfileGroup)-[:DEPENDS]->(s:Structure) "
 				+ "RETURN DISTINCT s.id AS id, s.name AS name, s.UAI AS uai ORDER BY s.name",
 				new JsonObject().put("id", userId));
 	}
