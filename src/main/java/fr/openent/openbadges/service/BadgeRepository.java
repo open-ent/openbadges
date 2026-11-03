@@ -99,6 +99,84 @@ public class BadgeRepository {
 				new JsonArray().add(id));
 	}
 
+	// ------------------------------------------------------------------ catalogue des programmes
+
+	/** L'émetteur de la plateforme, créateur des badges du catalogue (sans établissement). */
+	public Future<JsonObject> upsertPlatformIssuer(String id, String name, String url) {
+		return Db.sqlOne("INSERT INTO openbadges.issuer (id, name, url) VALUES (?, ?, ?) "
+				+ "ON CONFLICT (id) DO UPDATE SET name = EXCLUDED.name, url = EXCLUDED.url "
+				+ "RETURNING " + ISSUER_COLUMNS, new JsonArray().add(id).add(name).add(url));
+	}
+
+	public Future<JsonObject> bundle(String resource) {
+		return Db.sqlOne("SELECT resource, sha256 FROM openbadges.bundle WHERE resource = ?",
+				new JsonArray().add(resource));
+	}
+
+	/**
+	 * Enregistre un catalogue : chaque badge est créé ou mis à jour (même identifiant), puis
+	 * l'empreinte du fichier, le tout dans une transaction. Un badge retiré du catalogue n'est pas
+	 * supprimé — ses attestations disparaîtraient avec lui.
+	 */
+	public Future<Void> saveCatalogue(String resource, String sha256, String catalogue, String issuerId,
+									  JsonArray badges) {
+		final JsonArray statements = new JsonArray();
+		for (int i = 0; i < badges.size(); i++) {
+			final JsonObject badge = badges.getJsonObject(i);
+			statements.add(Db.statement("INSERT INTO openbadges.achievement (id, issuer_id, name, "
+					+ "description, criteria_narrative, alignments, catalogue, case_item, cycle, subject, "
+					+ "levels, objectives) VALUES (?, ?, ?, ?, ?, ?::jsonb, ?, ?, ?, ?, ?::jsonb, ?::jsonb) "
+					+ "ON CONFLICT (id) DO UPDATE SET name = EXCLUDED.name, "
+					+ "description = EXCLUDED.description, criteria_narrative = EXCLUDED.criteria_narrative, "
+					+ "alignments = EXCLUDED.alignments, catalogue = EXCLUDED.catalogue, "
+					+ "case_item = EXCLUDED.case_item, cycle = EXCLUDED.cycle, subject = EXCLUDED.subject, "
+					+ "levels = EXCLUDED.levels, objectives = EXCLUDED.objectives",
+					new JsonArray().add(badge.getString("id")).add(issuerId).add(badge.getString("name"))
+							.add(badge.getString("description")).add(badge.getString("criteria"))
+							.add(badge.getJsonArray("alignments", new JsonArray()).encode())
+							.add(catalogue).add(badge.getString("caseItem")).add(badge.getString("cycle"))
+							.add(badge.getString("subject"))
+							.add(badge.getJsonArray("levels", new JsonArray()).encode())
+							.add(badge.getJsonArray("objectives", new JsonArray()).encode())));
+		}
+		statements.add(Db.statement("INSERT INTO openbadges.bundle (resource, sha256) VALUES (?, ?) "
+				+ "ON CONFLICT (resource) DO UPDATE SET sha256 = EXCLUDED.sha256, loaded_at = NOW()",
+				new JsonArray().add(resource).add(sha256)));
+		return Db.transaction(statements).mapEmpty();
+	}
+
+	/** Les badges du catalogue, sans la liste des énoncés couverts (lourde). */
+	public Future<JsonArray> catalogue() {
+		return Db.sql("SELECT id, name, description, case_item, cycle, subject, levels, "
+				+ "jsonb_array_length(objectives) AS objectives FROM openbadges.achievement "
+				+ "WHERE catalogue IS NOT NULL ORDER BY cycle, subject, name", new JsonArray());
+	}
+
+	/** Énoncés couverts par chaque badge du catalogue : de quoi rattacher un exercice à son badge. */
+	public Future<JsonArray> catalogueObjectives() {
+		return Db.sql("SELECT id, name, cycle, subject, objectives FROM openbadges.achievement "
+				+ "WHERE catalogue IS NOT NULL", new JsonArray());
+	}
+
+	/** Les badges non révoqués détenus par ces élèves. */
+	public Future<JsonArray> heldBy(List<String> userIds) {
+		final JsonArray params = new JsonArray();
+		userIds.forEach(params::add);
+		return Db.sql("SELECT subject_user_id, achievement_id FROM openbadges.credential "
+				+ "WHERE NOT revoked AND subject_user_id IN (" + Db.placeholders(userIds.size()) + ")",
+				params);
+	}
+
+	/** Les attestations d'une personne, avec le badge et l'établissement qui l'a décerné. */
+	public Future<JsonArray> walletOf(String userId) {
+		return Db.sql("SELECT c.id, c.name, c.narrative, c.valid_from, c.revoked, c.revoked_reason, c.jws, "
+				+ "a.id AS achievement_id, a.description, a.cycle, a.subject, a.case_item, "
+				+ "i.name AS issuer_name FROM openbadges.credential c "
+				+ "JOIN openbadges.achievement a ON a.id = c.achievement_id "
+				+ "JOIN openbadges.issuer i ON i.id = c.issuer_id "
+				+ "WHERE c.subject_user_id = ? ORDER BY c.created_at DESC", new JsonArray().add(userId));
+	}
+
 	// ------------------------------------------------------------------ attestations
 
 	public Future<JsonObject> credential(String id) {

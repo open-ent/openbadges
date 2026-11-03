@@ -1,9 +1,11 @@
 package fr.openent.openbadges;
 
 import fr.openent.openbadges.controller.AdminController;
+import fr.openent.openbadges.controller.BadgesController;
 import fr.openent.openbadges.controller.ObController;
 import fr.openent.openbadges.controller.PublicController;
 import fr.openent.openbadges.controller.TokenController;
+import fr.openent.openbadges.service.BundledCatalogue;
 import io.vertx.core.Future;
 import io.vertx.core.Promise;
 import org.entcore.common.http.BaseServer;
@@ -28,6 +30,8 @@ public class OpenBadges extends BaseServer {
 				.compose(v -> addController(new ObController(context)))
 				.compose(v -> addController(new PublicController(context)))
 				.compose(v -> addController(new AdminController(context)))
+				.compose(v -> addController(new BadgesController(context)))
+				.onSuccess(v -> new BundledCatalogue(context).scheduleLoad())
 				.mapEmpty();
 	}
 }

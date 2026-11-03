@@ -174,8 +174,8 @@ public class AdminController extends BaseController {
 				}
 				// L'émetteur est l'ÉTABLISSEMENT qui décerne, pas le propriétaire du badge :
 				// un badge est défini une fois et décerné par chacun en son nom.
-				return issuerFor(body, user).compose(issuer ->
-						sign(body, achievement, issuer, user.getUserId()));
+				return issuerFor(body, user).compose(issuer -> studentOf(issuer, userId, user)
+						.compose(v -> sign(body, achievement, issuer, user.getUserId())));
 			});
 		}))
 				.onSuccess(result -> Http.json(request, 201, result))
@@ -195,8 +195,15 @@ public class AdminController extends BaseController {
 	 */
 	private Future<JsonObject> issuerFor(JsonObject body, UserInfos user) {
 		final String declared = body.getString("structureId");
-		if (!blank(declared)) {
+		if (!blank(declared) && superAdmin(user)) {
 			return ensureIssuer(declared, user.getUserId());
+		}
+		if (!blank(declared)) {
+			// Un enseignant ne signe qu'au nom d'un établissement où il exerce.
+			return ctx.directory.structuresOf(user.getUserId()).compose(structures ->
+					contains(structures, declared)
+							? ensureIssuer(declared, user.getUserId())
+							: Future.<JsonObject>failedFuture(new BadgeException(403, BadgeException.FORBIDDEN)));
 		}
 		return ctx.directory.structuresOf(user.getUserId()).compose(structures -> {
 			if (structures.isEmpty()) {
@@ -209,6 +216,33 @@ public class AdminController extends BaseController {
 			}
 			return ensureIssuer(structures.getJsonObject(0).getString("id"), user.getUserId());
 		});
+	}
+
+	/**
+	 * L'élève doit appartenir à l'établissement qui décerne : sans ce contrôle, n'importe quel
+	 * détenteur du droit de délivrance signerait au nom de son collège pour un inconnu.
+	 */
+	private Future<Void> studentOf(JsonObject issuer, String studentId, UserInfos user) {
+		final String structureId = issuer.getString("structure_id");
+		if (structureId == null || superAdmin(user)) {
+			return Future.succeededFuture();
+		}
+		return ctx.directory.structuresOf(studentId).compose(structures -> contains(structures, structureId)
+				? Future.<Void>succeededFuture()
+				: Future.<Void>failedFuture(new BadgeException(403, "user.not.in.structure")));
+	}
+
+	private static boolean superAdmin(UserInfos user) {
+		return user.getFunctions() != null && user.getFunctions().containsKey("SUPER_ADMIN");
+	}
+
+	private static boolean contains(JsonArray structures, String structureId) {
+		for (int i = 0; i < structures.size(); i++) {
+			if (structureId.equals(structures.getJsonObject(i).getString("id"))) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	private Future<JsonObject> ensureIssuer(String structureId, String userId) {
@@ -286,9 +320,24 @@ public class AdminController extends BaseController {
 	@Put("/admin/credentials/:id/revocation")
 	@SecuredAction("openbadges.issue")
 	public void revoke(HttpServerRequest request) {
-		Http.json(request)
-				.compose(body -> repository.revoke(request.params().get("id"),
-						body.getString("reason")))
+		final String id = request.params().get("id");
+		// Seul l'établissement qui a décerné retire : c'est sa liste de révocation qui fait foi.
+		user(request).compose(user -> repository.credential(id).compose(credential -> {
+			if (credential == null) {
+				return Future.<Void>failedFuture(BadgeException.notFound("credential"));
+			}
+			if (superAdmin(user)) {
+				return Future.<Void>succeededFuture();
+			}
+			return repository.issuer(credential.getString("issuer_id")).compose(issuer ->
+					ctx.directory.structuresOf(user.getUserId()).compose(structures ->
+							issuer != null && issuer.getString("structure_id") != null
+									&& contains(structures, issuer.getString("structure_id"))
+									? Future.<Void>succeededFuture()
+									: Future.<Void>failedFuture(new BadgeException(403, BadgeException.FORBIDDEN))));
+		}))
+				.compose(v -> Http.json(request))
+				.compose(body -> repository.revoke(id, body.getString("reason")))
 				.compose(row -> {
 					if (row == null) {
 						return Future.<JsonObject>failedFuture(BadgeException.notFound("credential"));

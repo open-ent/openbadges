@@ -57,6 +57,32 @@ public class DirectoryService {
 				new JsonObject().put("id", userId));
 	}
 
+	/** Les classes d'un enseignant, avec leur établissement. */
+	public Future<JsonArray> classesOf(String userId) {
+		return query("MATCH (u:User {id:$id})-[:IN]->(:ProfileGroup)-[:DEPENDS]->(c:Class)-[:BELONGS]->(s:Structure) "
+				+ "RETURN DISTINCT c.id AS id, c.name AS name, s.id AS structureId, s.name AS structureName "
+				+ "ORDER BY structureName, name", new JsonObject().put("id", userId));
+	}
+
+	/** Les élèves d'une classe. */
+	public Future<JsonArray> studentsOf(String classId) {
+		return query("MATCH (c:Class {id:$id})<-[:DEPENDS]-(:ProfileGroup {filter:'Student'})<-[:IN]-(u:User) "
+				+ "RETURN DISTINCT u.id AS id, u.displayName AS displayName, u.lastName AS lastName, "
+				+ "u.firstName AS firstName ORDER BY lastName, firstName", new JsonObject().put("id", classId));
+	}
+
+	/** Vrai si l'élève est l'enfant de ce parent dans l'annuaire. */
+	public Future<Boolean> isChildOf(String childId, String parentId) {
+		return query("MATCH (c:User {id:$child})-[:RELATED]->(p:User {id:$parent}) RETURN c.id AS id",
+				new JsonObject().put("child", childId).put("parent", parentId)).map(rows -> !rows.isEmpty());
+	}
+
+	/** Les enfants d'un parent. */
+	public Future<JsonArray> childrenOf(String parentId) {
+		return query("MATCH (c:User)-[:RELATED]->(p:User {id:$id}) RETURN DISTINCT c.id AS id, "
+				+ "c.displayName AS displayName ORDER BY displayName", new JsonObject().put("id", parentId));
+	}
+
 	private Future<JsonArray> query(String cypher, JsonObject params) {
 		final Promise<JsonArray> promise = Promise.promise();
 		Neo4j.getInstance().execute(cypher, params, Neo4jResult.validResultHandler(
