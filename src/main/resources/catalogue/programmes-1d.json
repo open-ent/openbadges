@@ -1096,19 +1096,16 @@
    ],
    "name": "Cycle 1 · L’acquisition des premiers outils mathématiques · Explorer des grandeurs : la longueur, la masse",
    "description": "Atteste que l'élève a atteint les objectifs du programme de l’acquisition des premiers outils mathématiques au cycle 1 pour « Explorer des grandeurs : la longueur, la masse ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- La longueur\n- Reconnaitre un objet de même longueur qu’un objet donné.\n- Comparer des objets selon leur longueur.\n- La longueur\n- Comparer directement des longueurs d’objets rectilignes et verbaliser le résultat.\n- Classer des objets rectilignes selon leur longueur.\n- Ordonner des objets rectilignes selon leur longueur et verbaliser le résultat. La masse\n- Comparer les masses de deux objets.\n- La longueur\n- Comparer indirectement des longueurs d’objets rectilignes.\n- Ordonner des objets rectilignes selon leur longueur (au maximum cinq).\n- Produire un objet rectiligne de même longueur qu’un objet donné. La masse\n- Ordonner les masses de trois objets. Verbaliser les résultats.\n- Reconnaitre l’égalité de deux masses et verbaliser le résultat.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Reconnaitre un objet de même longueur qu’un objet donné.\n- Comparer des objets selon leur longueur.\n- Comparer directement des longueurs d’objets rectilignes et verbaliser le résultat.\n- Classer des objets rectilignes selon leur longueur.\n- Ordonner des objets rectilignes selon leur longueur et verbaliser le résultat. La masse\n- Comparer les masses de deux objets.\n- Comparer indirectement des longueurs d’objets rectilignes.\n- Ordonner des objets rectilignes selon leur longueur (au maximum cinq).\n- Produire un objet rectiligne de même longueur qu’un objet donné. La masse\n- Ordonner les masses de trois objets. Verbaliser les résultats.\n- Reconnaitre l’égalité de deux masses et verbaliser le résultat.",
    "targetName": "Explorer des grandeurs : la longueur, la masse",
    "objectives": [
     "73c9c4cc-ee31-5298-bb7d-303f78a45778",
-    "22596a71-89a8-58d6-a8d5-7bae55328ab8",
     "3a0da71c-49e5-5e7a-865d-0a9f3fdef5f1",
     "3da2b868-2584-5913-9ad3-e104b0a56222",
-    "db756d6f-a1f1-5836-9485-9a3725fa05ca",
     "870645ce-cd82-573e-afe6-01649b33b53a",
     "fe3e877b-4dba-56a3-ad0c-122f7ca87ac5",
     "aa506aa7-da7a-59ce-b9ab-30904b6ab046",
     "d853a527-cdaa-5e09-849f-c3c318ccf6af",
-    "cda60109-4958-5534-8b4c-2d5198dab262",
     "bb388002-185b-5ed4-b703-e81af4f27cfa",
     "01986587-2d9b-5698-8dbf-f4cf56ea809e",
     "37cba112-fd5b-5424-964d-fdad4d05bdfa",
@@ -1147,7 +1144,7 @@
   {
    "id": "d580a640-ff02-53d7-b2f2-3b83b43d701e",
    "caseItem": "b3465c80-8a34-529f-8f31-30eb1218c451",
-   "code": "C1.RTE.1.18",
+   "code": "C1.RTE.1.16",
    "cycle": "C1",
    "subject": "Se repérer dans le temps et l’espace",
    "levels": [
@@ -1177,7 +1174,7 @@
   {
    "id": "85fd5fd9-4999-5376-9d21-6ed2dae98bab",
    "caseItem": "459f9264-761d-5149-a239-d0a9ea99e584",
-   "code": "C1.RTE.1.19",
+   "code": "C1.RTE.1.17",
    "cycle": "C1",
    "subject": "Se repérer dans le temps et l’espace",
    "levels": [
@@ -1399,7 +1396,7 @@
    ],
    "name": "Cycle 2 · Enseignement moral et civique · Les règles collectives et l’autonomie",
    "description": "Atteste que l'élève a atteint les objectifs du programme de enseignement moral et civique au cycle 2 pour « Les règles collectives et l’autonomie ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- S’approprier les règles de l’école (droits et devoirs), pour soi-même (son propre bien-être et sa propre sécurité)\n- Respecter les différents adultes de l’école en identifiant leur rôle\n- Développer son autonomie\n- Prendre des initiatives personnelles et faire des choix sans craindre de se tromper\n- Identifier les risques et le dangers de son environnement immédiat et adopter un comportement adapté\n- Respecter les équipements de la collectivité, condition du partage de biens communs\n- Savoir que les enfants ont des droits (Convention internationale des droits de l’enfant, 1989).",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- S’approprier les règles de l’école (droits et devoirs), pour soi-même (son propre bien-être et sa propre sécurité)\n- Respecter les différents adultes de l’école en identifiant leur rôle\n- Développer son autonomie\n- Prendre des initiatives personnelles et faire des choix sans craindre de se tromper\n- Identifier les risques et les dangers de son environnement immédiat et adopter un comportement adapté\n- Respecter les équipements de la collectivité, condition du partage de biens communs\n- Savoir que les enfants ont des droits (Convention internationale des droits de l’enfant, 1989).",
    "targetName": "Les règles collectives et l’autonomie",
    "objectives": [
     "3f247cdb-43e3-5c4f-b1b7-649ece9af978",
@@ -1407,7 +1404,7 @@
     "e9d4b11e-9003-509d-91ef-18a143e3b6b1",
     "1a434d0d-4a2b-5b4a-ab5f-4066471ebf06",
     "b4b7b2d6-d5a1-5407-9a81-f877f8757957",
-    "5ba1fc23-4b0b-54eb-92ef-027c4918f8b8",
+    "eb50c429-a548-5ac2-a40b-a4c2e35de154",
     "c7513c6d-1b90-5ad0-9192-67a1127c103b",
     "a0b7c037-352a-5d82-8abb-f0f0dafefb06"
    ]
@@ -1526,12 +1523,12 @@
    ],
    "name": "Cycle 2 · Enseignement moral et civique · L’engagement pour le bien commun",
    "description": "Atteste que l'élève a atteint les objectifs du programme de enseignement moral et civique au cycle 2 pour « L’engagement pour le bien commun ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Sensibiliser à la notion de bien commun et amener les élèves à prendre conscience que les actions individuelles doivent tenir compte de l’intérêt collectif\n- Savoir qu’il existe des institutions et des associations au service du fon bien commun\n- Aborder des enjeux d’intérêt collectif : l’éducation pour tous, l’environnement, la sécurité, l’information.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Sensibiliser à la notion de bien commun et amener les élèves à prendre conscience que les actions individuelles doivent tenir compte de l’intérêt collectif\n- Savoir qu’il existe des institutions et des associations au service du bien commun\n- Aborder des enjeux d’intérêt collectif : l’éducation pour tous, l’environnement, la sécurité, l’information.",
    "targetName": "L’engagement pour le bien commun",
    "objectives": [
     "5449e103-07b2-5c07-a82a-c733ea240115",
     "050754c8-8d25-59ee-8ee9-29fe272d2588",
-    "b3cf611e-ce59-5eb3-a147-b5ac4b447102",
+    "bcb0b20f-4bf2-568c-8ebe-5ddda1d75a36",
     "a921bd0b-b387-537c-836d-c226b505a6fc"
    ]
   },
@@ -1871,11 +1868,12 @@
    ],
    "name": "Cycle 2 · Éducation physique et sportive · Développer une motricité à visée artistique",
    "description": "Atteste que l'élève a atteint les objectifs du programme de éducation physique et sportive au cycle 2 pour « Développer une motricité à visée artistique ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Explorer des actions à visée artistique Explorer l’espace scénique.\n- Reproduire des actions à visée artistique.\n- Varier ses actions dans l’espace scénique.\n- Reproduire des actions à visée artistique.\n- Varier ses actions dans l’espace scénique.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Explorer des actions à visée artistique\n- Explorer l’espace scénique.\n- Reproduire des actions à visée artistique.\n- Varier ses actions dans l’espace scénique.\n- Reproduire des actions à visée artistique.\n- Varier ses actions dans l’espace scénique.",
    "targetName": "Développer une motricité à visée artistique",
    "objectives": [
     "5849147c-18bd-5dd4-820b-b7504d24038c",
-    "47a12c42-e73f-5d88-ae56-a344fe79b00c",
+    "710b42b1-f68d-58b2-8618-98e9d6f096c1",
+    "6ee6ac14-27e5-5973-9bcd-6faea424ff88",
     "d371bc2b-0897-59c3-a29d-6dea1c9c1f4b",
     "f85bd21a-c80b-5e87-824a-f0a17ae7a3be",
     "4dbc669d-eaac-5e53-940c-687dd95bcf91",
@@ -2390,7 +2388,7 @@
    ],
    "name": "Cycle 2 · Français · Copier et acquérir des stratégies de copie",
    "description": "Atteste que l'élève a atteint les objectifs du programme de français au cycle 2 pour « Copier et acquérir des stratégies de copie ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Copier des syllabes simples puis des mots avec lettres muettes.\n- Copier une phrase en lien avec les 12/15 correspondances graphophonémiques étudiées.\n- Commencer à verbaliser et à utiliser des stratégies de copie pour dépasser la copie lettre à lettre : prise d’indices, mémorisation de mots ou groupes de mots.\n- Commencer à savoir se relire après copie.\n- Copier trois ou quatre phrases sans erreur et de façon lisible.\n- Automatiser le geste d’écriture cursive par la copie de textes en temps limité.\n- Acquérir des stratégies de copie et en mesurer l’efficacité. À l’issue de la période 1\n- Copier quatre à cinq phrases courtes.\n- Copier cinq ou six lignes sans erreur.\n- Recopier sans effort une dizaine de lignes en respectant la ponctuation et la mise en page.\n- Copier une dizaine de lignes sans erreur en conjuguant vitesse et exactitude et en respectant les mises en page complexes.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Copier des syllabes simples puis des mots avec lettres muettes.\n- Copier une phrase en lien avec les 12/15 correspondances graphophonémiques étudiées.\n- Commencer à verbaliser et à utiliser des stratégies de copie pour dépasser la copie lettre à lettre : prise d’indices, mémorisation de mots ou groupes de mots.\n- Commencer à savoir se relire après copie.\n- Copier trois ou quatre phrases sans erreur et de façon lisible.\n- Automatiser le geste d’écriture cursive par la copie de textes en temps limité.\n- Acquérir des stratégies de copie et en mesurer l’efficacité.\n- Copier quatre à cinq phrases courtes.\n- Copier cinq ou six lignes sans erreur.\n- Recopier sans effort une dizaine de lignes en respectant la ponctuation et la mise en page.\n- Copier une dizaine de lignes sans erreur en conjuguant vitesse et exactitude et en respectant les mises en page complexes.",
    "targetName": "Copier et acquérir des stratégies de copie",
    "objectives": [
     "635df534-81da-5ee4-ae9e-9b3c83de3df2",
@@ -2400,7 +2398,7 @@
     "65514c30-8558-5a72-98b2-db09243d1e24",
     "d4cb6e40-d36e-56ac-b716-5302ec681329",
     "172bb280-9eda-5213-90c9-026b2108b745",
-    "31f4bae7-8f9b-5d46-ae81-e0f24edd1a1f",
+    "e84a4c95-bbad-577c-aaf3-32f9ac06bace",
     "3ac77b3a-b20c-527b-a828-4c8315bdf433",
     "7358ff7e-9095-514c-9adf-33a07126e3c2",
     "541939fb-8b3e-5fb8-b1d2-96e89d3abc30",
@@ -3023,14 +3021,14 @@
    ],
    "name": "Cycle 2 · Langues vivantes étrangères et régionales · Comprendre quelques mots familiers et expressions très courantes",
    "description": "Atteste que l'élève a atteint les objectifs du programme de langues vivantes étrangères et régionales au cycle 2 pour « Comprendre quelques mots familiers et expressions très courantes ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Repérer quelques mots du champ lexical de la prise de contact ou des salutations\n- Reconnaitre les pronoms interrogatifs usuels\n- Reconnaitre les pronoms personnels sujets (je, tu), compléments (moi, toi) et les déterminants possessifs (mon, ton) accompagnés de gestes.\n- Identifier les verbes permettant d’exprimer le gout et le dégout, ainsi que quelques adjectifs accompagnés de gestes, CP en expressions du visage ou d’un support visuel.\n- Identifier l’humeur de ses interlocuteurs (tristesse, joie, colère) en s’aidant de l’émotion portée par la voix, les gestes et les expressions du visage.\n- Repérer les mots simples et familiers accompagnés de visuels (famille et environnement immédiat).\n- Repérer quelques mots du champ lexical de la prise de contact ou des salutations.\n- Reconnaitre les formules usuelles d’encouragement et de félicitations.\n- Reconnaitre les pronoms interrogatifs usuels (Qui ? Que ? Où ? Comment ?)\n- Reconnaitre les pronoms personnels sujets (je, tu, (A1) il/elle/on), compléments (moi, toi, (A1) elle/lui/ça) et les déterminants possessifs (mon, ton, (A1) son/sa) pour déterminer qui parle (A1) et de qui l’on parle.\n- (A1) Identifier les verbes permettant d’exprimer le gout et le dégout ainsi que quelques adjectifs associés, (pré-A1) accompagnés si besoin de gestes, expressions du visage ou d’un support visuel.\n- (A1) Identifier l’humeur des interlocuteurs (tristesse, joie, colère) en s’aidant de l’émotion portée par la voix, (pré-A1) les gestes et les expressions du visage.\n- (A1) Repérer les mots simples et familiers (pré-A1) accompagnés de visuels (A1) (famille et environnement immédiat).\n- Repérer quelques mots du champ lexical de la prise de contact ou des salutations.\n- Reconnaitre les formules usuelles d’encouragement et de félicitations.\n- Reconnaitre les pronoms interrogatifs usuels (Qui ? Que ? Où ? (A1) Quand ? Comment ?).\n- Reconnaitre les pronoms personnels sujets, compléments et les déterminants possessifs (A1) pour déterminer qui parle et de qui l’on parle.\n- (A1) Identifier les verbes permettant d’exprimer le gout et le dégout ainsi que quelques adjectifs associés, (pré-A1) accompagnés si besoin de gestes, expressions du visage ou d’un support visuel.\n- (A1) Identifier l’humeur des interlocuteurs (tristesse, joie, colère) en s’aidant de l’émotion portée par la voix, (pré-A1) les gestes et les expressions du visage.\n- (A1) Repérer les mots simples et familiers (pré-A1) accompagnés de visuels ((A1) famille et environnement immédiat).",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Repérer quelques mots du champ lexical de la prise de contact ou des salutations\n- Reconnaitre les pronoms interrogatifs usuels\n- Reconnaitre les pronoms personnels sujets (je, tu), compléments (moi, toi) et les déterminants possessifs (mon, ton) accompagnés de gestes.\n- Identifier les verbes permettant d’exprimer le gout et le dégout, ainsi que quelques adjectifs accompagnés de gestes, CP expressions du visage ou d’un support visuel.\n- Identifier l’humeur de ses interlocuteurs (tristesse, joie, colère) en s’aidant de l’émotion portée par la voix, les gestes et les expressions du visage.\n- Repérer les mots simples et familiers accompagnés de visuels (famille et environnement immédiat).\n- Repérer quelques mots du champ lexical de la prise de contact ou des salutations.\n- Reconnaitre les formules usuelles d’encouragement et de félicitations.\n- Reconnaitre les pronoms interrogatifs usuels (Qui ? Que ? Où ? Comment ?)\n- Reconnaitre les pronoms personnels sujets (je, tu, (A1) il/elle/on), compléments (moi, toi, (A1) elle/lui/ça) et les déterminants possessifs (mon, ton, (A1) son/sa) pour déterminer qui parle (A1) et de qui l’on parle.\n- (A1) Identifier les verbes permettant d’exprimer le gout et le dégout ainsi que quelques adjectifs associés, (pré-A1) accompagnés si besoin de gestes, expressions du visage ou d’un support visuel.\n- (A1) Identifier l’humeur des interlocuteurs (tristesse, joie, colère) en s’aidant de l’émotion portée par la voix, (pré-A1) les gestes et les expressions du visage.\n- (A1) Repérer les mots simples et familiers (pré-A1) accompagnés de visuels (A1) (famille et environnement immédiat).\n- Repérer quelques mots du champ lexical de la prise de contact ou des salutations.\n- Reconnaitre les formules usuelles d’encouragement et de félicitations.\n- Reconnaitre les pronoms interrogatifs usuels (Qui ? Que ? Où ? (A1) Quand ? Comment ?).\n- Reconnaitre les pronoms personnels sujets, compléments et les déterminants possessifs (A1) pour déterminer qui parle et de qui l’on parle.\n- (A1) Identifier les verbes permettant d’exprimer le gout et le dégout ainsi que quelques adjectifs associés, (pré-A1) accompagnés si besoin de gestes, expressions du visage ou d’un support visuel.\n- (A1) Identifier l’humeur des interlocuteurs (tristesse, joie, colère) en s’aidant de l’émotion portée par la voix, (pré-A1) les gestes et les expressions du visage.\n- (A1) Repérer les mots simples et familiers (pré-A1) accompagnés de visuels ((A1) famille et environnement immédiat).",
    "targetName": "Comprendre quelques mots familiers et expressions très courantes",
    "objectives": [
     "efdd1913-a235-5752-b099-4f24e7da522b",
     "1e7f5d50-30cc-5bc6-8827-2e1623d8523b",
     "c807d355-3488-5207-816d-f0891b191c9a",
     "1313e881-33d4-5475-ad86-e4f8f4bedfde",
-    "4488c59f-2ec7-595b-bd0b-779523155ad9",
+    "25892058-09ca-5032-a26c-85cfd47535e3",
     "dc95a9d2-5b8b-5468-a6d2-280af9eb78eb",
     "c6938bcc-adb1-57b3-82e8-b8755e53d561",
     "8b019b48-2e0a-58ca-91e1-a8e702ee2667",
@@ -3144,7 +3142,7 @@
    ],
    "name": "Cycle 2 · Langues vivantes étrangères et régionales · Reproduire un modèle oral",
    "description": "Atteste que l'élève a atteint les objectifs du programme de langues vivantes étrangères et régionales au cycle 2 pour « Reproduire un modèle oral ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Parler de soi ou de son environnement familier en s’appuyant sur des supports visuels et en prononçant correctement des formules brèves, ritualisées et mémorisées.\n- Nommer, caractériser, dénombrer très simplement des personnes, des objets, des lieux :  mobiliser quelques mots connus en lien avec les domaines étudiés (l’école, la famille, etc.)  avoir recours à quelques adjectifs usuels  compter en utilisant la suite numérique\n- Situer dans l’espace, à l’aide de prépositions et d'expressions lexicalisées, les personnes, les objets et les lieux.\n- Situer dans le temps :  exprimer le jour ;  exprimer des repères temporels très simples.\n- (A1) Parler de soi ou de son environnement familier, (pré-A1) en s’appuyant sur des supports visuels (A1) et en prononçant correctement des formulations (pré-A1) brèves (A1) ritualisées et mémorisées.\n- Dire à voix haute une expression ou phrase courte déjà connue à l’oral (A1) ou chanter collectivement une courte comptine.\n- Nommer, caractériser, dénombrer très simplement des personnes, des objets, des lieux :  mobiliser quelques mots (A1) ou champs lexicaux connus (pré-A1) en lien avec les domaines (A1) et thématiques étudiés (l’école, la famille, etc.) (A1) et les champs lexicaux de l’environnement géographique et culturel proche, des prénoms, du matériel scolaire, etc.  avoir recours à quelques adjectifs usuels  (A1) appliquer les règles élémentaires de l’accord (pré-A1) compter en utilisant la suite numérique.\n- Situer dans l’espace les personnes, les objets et les lieux, à l’aide de prépositions et d'expressions lexicalisées.\n- Situer dans le temps :  exprimer le jour (A1) et la date du jour en s’appuyant sur un étayage visuel qui donne à voir les correspondances entre les nombres cardinaux et les nombres ordinaux ;  exprimer des repères temporels très simples.\n- (A1) Reproduire un modèle oral court en suivant la trame d’une histoire répétitive (histoire en randonnée).\n- (A1) Prononcer correctement des formulations brèves ritualisées et mémorisées pour parler de soi ou de son environnement familier (pré-A1)et en s’appuyant sur des supports visuels.\n- (A1) Lire à voix haute une expression ou phrase courte déjà connue à l’oral ou mémorisée.\n- Nommer, caractériser, dénombrer très simplement des personnes, des objets, des lieux :  mobiliser quelques mots (A1) ou champs lexicaux connus en lien avec les domaines abordés (A1) ou les thématiques étudiées (l’école, la famille, etc.) (A1) et les champs lexicaux S de l’environnement géographique et culturel proche, des prénoms, du matériel scolaire, etc. ;  (pré-A1)avoir recours à quelques adjectifs usuels ;  (A1) appliquer les règles élémentaires de l’accord ;  (pré-A1)compter en utilisant la suite numérique.\n- Situer dans l’espace les personnes, les objets et les lieux, à l’aide de prépositions et d'expressions lexicalisées.\n- Situer dans le temps :  exprimer la date du jour (A1) en s’appuyant sur un étayage visuel qui donne à voir les correspondances entre les nombres cardinaux et les nombres ordinaux ;  (pré-A1) exprimer des repères temporels très simples ;  (A1) raconter des événements dans un ordre chronologique simple.\n- (A1) Reproduire un modèle oral court en suivant la trame d’une histoire répétitive (histoire en randonnée).",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Parler de soi ou de son environnement familier en s’appuyant sur des supports visuels et en prononçant correctement des formules brèves, ritualisées et mémorisées.\n- Nommer, caractériser, dénombrer très simplement des personnes, des objets, des lieux :  mobiliser quelques mots connus en lien avec les domaines étudiés (l’école, la famille, etc.)  avoir recours à quelques adjectifs usuels  compter en utilisant la suite numérique\n- Situer dans l’espace, à l’aide de prépositions et d'expressions lexicalisées, les personnes, les objets et les lieux.\n- Situer dans le temps :  exprimer le jour ;  exprimer des repères temporels très simples.\n- (A1) Parler de soi ou de son environnement familier, (pré-A1) en s’appuyant sur des supports visuels (A1) et en prononçant correctement des formulations (pré-A1) brèves (A1) ritualisées et mémorisées.\n- Dire à voix haute une expression ou phrase courte déjà connue à l’oral (A1) ou chanter collectivement une courte comptine.\n- Nommer, caractériser, dénombrer très simplement des personnes, des objets, des lieux :  mobiliser quelques mots (A1) ou champs lexicaux connus (pré-A1) en lien avec les domaines (A1) et thématiques étudiés (l’école, la famille, etc.) (A1) et les champs lexicaux de l’environnement géographique et culturel proche, des prénoms, du matériel scolaire, etc.  avoir recours à quelques adjectifs usuels  (A1) appliquer les règles élémentaires de l’accord (pré-A1) compter en utilisant la suite numérique.\n- Situer dans l’espace les personnes, les objets et les lieux, à l’aide de prépositions et d'expressions lexicalisées.\n- Situer dans le temps :  exprimer le jour (A1) et la date du jour en s’appuyant sur un étayage visuel qui donne à voir les correspondances entre les nombres cardinaux et les nombres ordinaux ;  exprimer des repères temporels très simples.\n- (A1) Reproduire un modèle oral court en suivant la trame d’une histoire répétitive (histoire en randonnée).\n- (A1) Prononcer correctement des formulations brèves ritualisées et mémorisées pour parler de soi ou de son environnement familier (pré-A1)et en s’appuyant sur des supports visuels.\n- (A1) Lire à voix haute une expression ou phrase courte déjà connue à l’oral ou mémorisée.\n- Nommer, caractériser, dénombrer très simplement des personnes, des objets, des lieux :  mobiliser quelques mots (A1) ou champs lexicaux connus en lien avec les domaines abordés (A1) ou les thématiques étudiées (l’école, la famille, etc.) (A1) et les champs lexicaux de l’environnement géographique et culturel proche, des prénoms, du matériel scolaire, etc. ;  (pré-A1)avoir recours à quelques adjectifs usuels ;  (A1) appliquer les règles élémentaires de l’accord ;  (pré-A1)compter en utilisant la suite numérique.\n- Situer dans l’espace les personnes, les objets et les lieux, à l’aide de prépositions et d'expressions lexicalisées.\n- Situer dans le temps :  exprimer la date du jour (A1) en s’appuyant sur un étayage visuel qui donne à voir les correspondances entre les nombres cardinaux et les nombres ordinaux ;  (pré-A1) exprimer des repères temporels très simples ;  (A1) raconter des événements dans un ordre chronologique simple.\n- (A1) Reproduire un modèle oral court en suivant la trame d’une histoire répétitive (histoire en randonnée).",
    "targetName": "Reproduire un modèle oral",
    "objectives": [
     "2e6556a3-6fb7-5d40-8ca1-151f8ccfd3d5",
@@ -3160,7 +3158,7 @@
     "dcc07b1b-7be5-5f18-ba20-cede522e1164",
     "b0c622da-a8dd-55a7-a9b1-1839432b76b7",
     "9398ad5c-03e5-5f11-893e-c2c65ebf97bb",
-    "8c112882-166e-5c69-a8aa-7f40aea3fdaa",
+    "4d406d6a-41e7-585d-af82-4ab381474181",
     "6ef03161-5e53-5835-abc4-ad247edc780d",
     "efe4fa3b-3bda-5ddb-be36-2cc195fcc5e3",
     "ceacae21-d016-5ac9-81de-c25713cd1417"
@@ -3220,7 +3218,7 @@
    ],
    "name": "Cycle 2 · Langues vivantes étrangères et régionales · Échanger des informations simples",
    "description": "Atteste que l'élève a atteint les objectifs du programme de langues vivantes étrangères et régionales au cycle 2 pour « Échanger des informations simples ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Poser quelques questions simples à l’aide des pronoms interrogatifs.\n- Donner quelques consignes ou ordres simples ritualisés à l’aide de verbes fréquemment utilisés à l’impératif.\n- Utiliser les réponses courtes.\n- Poser quelques questions simples à l’aide d’une gamme très réduite de pronoms interrogatifs.\n- Donner quelques consignes ou ordres simples ritualisés à l’aide de verbes fréquemment utilisés à l’impératif.\n- Utiliser les réponses courtes.\n- (A1) Mobiliser l’expression permettant de formuler simplement l’autorisation sous forme de bloc lexicalisé).\n- Poser quelques questions simples à l’aide d’une gamme très réduite de pronoms interrogatifs\n- Donner quelques consignes ou ordres simples ritualisés à l’aide de verbes fréquemment utilisés à l’impératif.\n- Utiliser les réponses courtes.\n- (A1) Mobiliser l’expression simple de l’autorisation sous forme e de bloc lexicalisé.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Poser quelques questions simples à l’aide des pronoms interrogatifs.\n- Donner quelques consignes ou ordres simples ritualisés à l’aide de verbes fréquemment utilisés à l’impératif.\n- Utiliser les réponses courtes.\n- Poser quelques questions simples à l’aide d’une gamme très réduite de pronoms interrogatifs.\n- Donner quelques consignes ou ordres simples ritualisés à l’aide de verbes fréquemment utilisés à l’impératif.\n- Utiliser les réponses courtes.\n- (A1) Mobiliser l’expression permettant de formuler simplement l’autorisation sous forme de bloc lexicalisé).\n- Poser quelques questions simples à l’aide d’une gamme très réduite de pronoms interrogatifs\n- Donner quelques consignes ou ordres simples ritualisés à l’aide de verbes fréquemment utilisés à l’impératif.\n- Utiliser les réponses courtes.\n- (A1) Mobiliser l’expression simple de l’autorisation sous forme de bloc lexicalisé.",
    "targetName": "Échanger des informations simples",
    "objectives": [
     "35374a23-9346-5426-ab04-f6d1a356719b",
@@ -3234,7 +3232,7 @@
     "ef6bab6b-0af3-52b0-8a36-edcbb870d6b8",
     "8f42ae64-558e-5e40-ab01-047c851565bc",
     "d1bf0522-e8b6-55de-a451-e8b2cd6464bd",
-    "0a6d5fe0-9ebd-5051-8c8a-8aa1cf2a8882"
+    "d6e992bb-bcc6-53be-8565-bb277c49c595"
    ]
   },
   {
@@ -3337,11 +3335,11 @@
    ],
    "name": "Cycle 2 · Langues vivantes étrangères et régionales · Reconnaitre des mots ou des messages écrits familiers",
    "description": "Atteste que l'élève a atteint les objectifs du programme de langues vivantes étrangères et régionales au cycle 2 pour « Reconnaitre des mots ou des messages écrits familiers ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- S’appuyer sur les mots familiers dès lors qu’ils ont fait l’objet d’un travail d’appropriation des correspondances graphophonémiques (A1) puis progressivement sans supports identifie l visuels.\n- Repérer les chiffres et les nombres en écriture littérale lorsqu’ils sont accompagnés d’une écriture chiffrée ou de visuels et qu’ils ont déjà fait l’objet d’un travail d’appropriation à l’oral et des correspondances graphophonémiques (A1) progressivement sans supports visuels.\n- (A1) Repérer des nombres jusqu’à 100, des quantités, des horaires, des prix, en identifiant l’appariement de nombres simples et de signes tels que 9 a.m., 3 p.m., 4 €, £5, $10, etc.\n- Reconnaitre quelques mots des champs lexicaux qui permettent de parler de soi et de sa sphère immédiate dès lors qu’ils ont fait l’objet d’un travail d’appropriation des correspondances graphophonémiques. Ils seront éventuellement accompagnés de visuels.\n- (A1) Reconnaitre quelques mots du champ lexical des activités quotidiennes dès lors qu’ils ont fait l’objet d’un travail d’appropriation à l’oral et d’observation des correspondances graphophonémiques. (pré-A1) Ils pourront être accompagnés de visuels.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- S’appuyer sur les mots familiers dès lors qu’ils ont fait l’objet d’un travail d’appropriation des correspondances graphophonémiques (A1) puis progressivement sans supports identifie visuels.\n- Repérer les chiffres et les nombres en écriture littérale lorsqu’ils sont accompagnés d’une écriture chiffrée ou de visuels et qu’ils ont déjà fait l’objet d’un travail d’appropriation à l’oral et des correspondances graphophonémiques (A1) progressivement sans supports visuels.\n- (A1) Repérer des nombres jusqu’à 100, des quantités, des horaires, des prix, en identifiant l’appariement de nombres simples et de signes tels que 9 a.m., 3 p.m., 4 €, £5, $10, etc.\n- Reconnaitre quelques mots des champs lexicaux qui permettent de parler de soi et de sa sphère immédiate dès lors qu’ils ont fait l’objet d’un travail d’appropriation des correspondances graphophonémiques. Ils seront éventuellement accompagnés de visuels.\n- (A1) Reconnaitre quelques mots du champ lexical des activités quotidiennes dès lors qu’ils ont fait l’objet d’un travail d’appropriation à l’oral et d’observation des correspondances graphophonémiques. (pré-A1) Ils pourront être accompagnés de visuels.",
    "targetName": "Reconnaitre des mots ou des messages écrits familiers",
    "objectives": [
     "fc294587-3dc1-57ab-9a88-b37ffe5533a1",
-    "fe997cf5-1257-50a7-990d-21d6fd6e0cf0",
+    "3d0c6006-4b62-5fb7-bf79-09ad1bcd3dac",
     "01d58bb6-68c4-5f88-ac52-36ababd52592",
     "478e3aa6-059b-53d4-9490-9a7a944e684d",
     "f231ee8b-1cd6-5245-8442-c7dadf117c75",
@@ -3359,12 +3357,12 @@
    ],
    "name": "Cycle 2 · Langues vivantes étrangères et régionales · Trouver des informations dans des écrits très simples",
    "description": "Atteste que l'élève a atteint les objectifs du programme de langues vivantes étrangères et régionales au cycle 2 pour « Trouver des informations dans des écrits très simples ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Trouver des informations simples et familières en s’appuyant sur les indices visuels (image) ainsi que sur les mots familiers l’ (A1) ainsi que sur les éléments mis en avant dans le titre du texte.\n- Reconnaitre quelques mots des champs lexicaux qui permettent de parler de soi et de sa sphère immédiate (A1) dès lors qu’ils ont fait l’objet d’un travail d’appropriation des d correspondances graphophonémiques.\n- Repérer les chiffres et les nombres en écriture littérale dès lors qu’ils sont accompagnés d’une écriture chiffrée ou de visuels.\n- (A1) Reconnaitre quelques mots du champ lexical des activités quotidiennes dès lors qu’ils ont fait l’objet d’un travail d’appropriation à l’oral et d’observation des correspondances graphophonémiques. (pré-A1) Ils peuvent être accompagnés de visuels.\n- (A1) Identifier quelques types de textes écrits grâce à leur mise en forme (invitation, carte postale, carte de vœux, publicité, etc.).",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Trouver des informations simples et familières en s’appuyant sur les indices visuels (image) ainsi que sur les mots familiers (A1) ainsi que sur les éléments mis en avant dans le titre du texte.\n- Reconnaitre quelques mots des champs lexicaux qui permettent de parler de soi et de sa sphère immédiate (A1) dès lors qu’ils ont fait l’objet d’un travail d’appropriation des correspondances graphophonémiques.\n- Repérer les chiffres et les nombres en écriture littérale dès lors qu’ils sont accompagnés d’une écriture chiffrée ou de visuels.\n- (A1) Reconnaitre quelques mots du champ lexical des activités quotidiennes dès lors qu’ils ont fait l’objet d’un travail d’appropriation à l’oral et d’observation des correspondances graphophonémiques. (pré-A1) Ils peuvent être accompagnés de visuels.\n- (A1) Identifier quelques types de textes écrits grâce à leur mise en forme (invitation, carte postale, carte de vœux, publicité, etc.).",
    "targetName": "Trouver des informations dans des écrits très simples",
    "objectives": [
     "7869a1f0-8c71-5bf4-b499-f8d85cd0aadc",
-    "16a8bf2f-c3b6-515a-9464-87c299f7d6a9",
-    "1c3237fd-2cf7-5f42-8e24-712b8af0bd57",
+    "32d48729-496c-57f3-afc7-aa07493342ef",
+    "db1fc296-bcf3-5d8e-a312-a46f1a48dcda",
     "e269f534-77bf-59c1-b818-93b7f53a258c",
     "341b8654-9bc8-5439-b449-a3a3af3587b4",
     "062b3d67-a6ad-58e3-a38c-ccbaa91db413"
@@ -3579,13 +3577,13 @@
    ],
    "name": "Cycle 2 · Mathématiques · Les fractions",
    "description": "Atteste que l'élève a atteint les objectifs du programme de mathématiques au cycle 2 pour « Les fractions ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Savoir interpréter, représenter, écrire et lire les fractions 1/2, 1/3, 1/4, 1/5, 1/6, 1/8 et 1/10.\n- Savoir établir des égalités de L’é fractions inférieures ou égales en à 1.\n- Partager une unité de longueur en fractions d’unité en q et mesurer des longueurs non entières par rapport à cette unité.\n- Comparer des fractions inférieures à 1.\n- Additionner et soustraire des fractions.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Savoir interpréter, représenter, écrire et lire les fractions 1/2, 1/3, 1/4, 1/5, 1/6, 1/8 et 1/10.\n- Savoir établir des égalités de fractions inférieures ou égales en à 1.\n- Partager une unité de longueur en fractions d’unité en et mesurer des longueurs non entières par rapport à cette unité.\n- Comparer des fractions inférieures à 1.\n- Additionner et soustraire des fractions.",
    "targetName": "Les fractions",
    "objectives": [
     "179b5ada-9b6b-5392-9ba0-06b270287716",
     "33953a48-0792-597e-ab75-2c193afdeeed",
-    "0c65e412-eb8d-5005-a744-d4d3be54fa91",
-    "1dd1edfc-1bba-5c17-8fc4-82b740aa435b",
+    "4ad614ba-3776-5b4a-9276-036d721b981a",
+    "2cca3e63-a98a-51a2-b130-9ebfa0fd3658",
     "5a975621-ce85-581e-a868-c0e58588fe69",
     "4f556bb9-574e-5cfb-9fc0-e1eaee7cfa83"
    ]
@@ -3636,7 +3634,7 @@
    ],
    "name": "Cycle 2 · Mathématiques · La monnaie",
    "description": "Atteste que l'élève a atteint les objectifs du programme de mathématiques au cycle 2 pour « La monnaie ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Utiliser le lexique spécifique lié à la monnaie.\n- Comparer les valeurs de deux ensembles constitués de pièces de monnaie ou de deux ensembles constitués de pièces et de billets.\n- Déterminer la valeur en euro d’un ensemble constitué de pièces et de billets.\n- Constituer une somme d’argent donnée avec des pièces et des billets.\n- Simuler des achats en manipulant des pièces et des billets fictifs. Rendre la monnaie.\n- Connaitre le lien entre les euros et les centimes.\n- Comparer les valeurs en euro de deux ensembles constitués de pièces et de billets.\n- Déterminer la valeur en euro et centime d’euro d’un ensemble constitué de pièces et de billets.\n- Constituer avec des euros et des centimes d’euro une somme d’argent d’une valeur u donnée.\n- Simuler des achats en manipulant des pièces et des billets fictifs. Rendre la monnaie.\n- Connaitre le sens de l’écriture à virgule d’une somme d’argent.\n- Simuler des achats en manipulant des pièces et des billets fictifs. Rendre la monnaie.\n- Poser et effectuer des additions de montants en euro.\n- Poser et effectuer des soustractions de montants – 74,56 € en euro.\n- 74,36 €",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Utiliser le lexique spécifique lié à la monnaie.\n- Comparer les valeurs de deux ensembles constitués de pièces de monnaie ou de deux ensembles constitués de pièces et de billets.\n- Déterminer la valeur en euro d’un ensemble constitué de pièces et de billets.\n- Constituer une somme d’argent donnée avec des pièces et des billets.\n- Simuler des achats en manipulant des pièces et des billets fictifs. Rendre la monnaie.\n- Connaitre le lien entre les euros et les centimes.\n- Comparer les valeurs en euro de deux ensembles constitués de pièces et de billets.\n- Déterminer la valeur en euro et centime d’euro d’un ensemble constitué de pièces et de billets.\n- Constituer avec des euros et des centimes d’euro une somme d’argent d’une valeur donnée.\n- Simuler des achats en manipulant des pièces et des billets fictifs. Rendre la monnaie.\n- Connaitre le sens de l’écriture à virgule d’une somme d’argent.\n- Simuler des achats en manipulant des pièces et des billets fictifs. Rendre la monnaie.\n- Poser et effectuer des additions de montants en euro.\n- Poser et effectuer des soustractions de montants – 74,56 € en euro.",
    "targetName": "La monnaie",
    "objectives": [
     "79553362-b31a-5e99-8015-50ab9866ff32",
@@ -3648,13 +3646,12 @@
     "25d6fbc3-c8d3-5089-86cd-0a1296a2ece8",
     "f3fab660-9665-55b5-89e1-753841da537a",
     "1b35ae6a-02b1-5b09-9c88-d8cdb9f4ed83",
-    "06589a0d-0080-54f7-a061-b03796460e51",
+    "24fd3ef4-0369-5dad-b89b-97e55293c6d3",
     "138d1252-0e95-5bea-82c7-2406b64a7899",
     "411db19c-dd0d-5163-94cc-64c167f15f78",
     "06915034-9d7c-5754-b3e3-7140fb1e6c8b",
     "5cbc8dc4-6544-5552-a4d2-d8cb9800b204",
-    "c155a17f-c0d1-5cb0-9ac2-43a2e95ee4eb",
-    "e58fa449-3aa3-53ce-b06b-8e6f5f505394"
+    "c155a17f-c0d1-5cb0-9ac2-43a2e95ee4eb"
    ]
   },
   {
@@ -3739,12 +3736,12 @@
    ],
    "name": "Cycle 2 · Mathématiques · Les solides",
    "description": "Atteste que l'élève a atteint les objectifs du programme de mathématiques au cycle 2 pour « Les solides ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Reconnaitre les solides usuels suivants : cube, boule, cône, cylindre, pavé.\n- Nommer un cube, un pavé et une boule.\n- Décrire un cube ou un pavé en utilisant le terme « face ». Connaitre le nombre et la nature des faces d’un cube et d’un pavé.\n- Construire des cubes et des pavés.\n- Reconnaitre les solides usuels suivants : cube, boule, cône, pyramide, cylindre, pavé.\n- Nommer un cube, une boule, un pavé, un cône ou une pyramide.\n- Décrire un cube, un pavé ou une pyramide en utilisant les termes « face », « sommet » et « arête ».\n- Connaitre le nombre et la nature des faces d’un cube ou d’un pavé.\n- Construire un cube, un pavé droit ou une pyramide.\n- Nommer un cube, une boule, un pavé, un cône, une pyramide ou un cylindre.\n- Décrire un cube, un pavé ou une pyramide en utilisant les termes « face », « sommet » et « arête ».\n- Connaitre le nombre et la nature des faces d’un cube ou d’un pavé.\n- Connaitre la nature des faces d’une pyramide.\n- Construire un cube, un pavé ou une pyramide.\n- Construire un cube à partir d’un patron.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Reconnaitre les solides usuels Un suivants : cube, boule, cône, cylindre, pavé.\n- Nommer un cube, un pavé et qu’une une boule.\n- Décrire un cube ou un pavé en utilisant le terme « face ». Connaitre le nombre et la nature des faces d’un cube et d’un pavé.\n- Construire des cubes et des pavés.\n- Reconnaitre les solides usuels suivants : cube, boule, cône, pyramide, cylindre, pavé.\n- Nommer un cube, une boule, un pavé, un cône ou une pyramide.\n- Décrire un cube, un pavé ou une pyramide en utilisant les termes « face », « sommet » et « arête ».\n- Connaitre le nombre et la nature des faces d’un cube ou d’un pavé.\n- Construire un cube, un pavé droit ou une pyramide.\n- Nommer un cube, une boule, un pavé, un cône, une pyramide ou un cylindre.\n- Décrire un cube, un pavé ou une pyramide en utilisant les termes « face », « sommet » et « arête ».\n- Connaitre le nombre et la nature des faces d’un cube ou d’un pavé.\n- Connaitre la nature des faces d’une pyramide.\n- Construire un cube, un pavé ou une pyramide.\n- Construire un cube à partir d’un patron.",
    "targetName": "Les solides",
    "objectives": [
     "41bf2c0c-6c84-5985-b1cf-fb6e112ed9c8",
-    "454d28ea-cbb9-5471-ac36-d3845b2d99bf",
-    "fd927272-a612-5517-8479-48eced961c82",
+    "17afb5c1-c448-5949-96cc-81b33d7bd50a",
+    "8f4b5a7d-91a3-5b3c-9959-c505faae6cff",
     "01b96c37-9008-5edb-b310-4075e765495d",
     "0e27f33b-b8d1-55b9-a636-82db80fbacb6",
     "f68ecc50-0dcf-5de7-a5e0-71e72e6cb125",
@@ -4453,12 +4450,12 @@
    ],
    "name": "Cycle 3 · Enseignement moral et civique · À l’école laïque",
    "description": "Atteste que l'élève a atteint les objectifs du programme de enseignement moral et civique au cycle 3 pour « À l’école laïque ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Le respect des croyances Les est assuré, mais, comme des ailleurs, leur expression est limitée par la loi. Celle-ci protège les élèves de toute influence religieuse et préserve leur liberté de conscience\n- Nul ne peut être discriminé pour sa croyance ou ses convictions, mais nul n’a Ce non plus le droit d’imposer ses croyances ou ses convictions aux autres.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Le respect des croyances Les est assuré, mais, comme des ailleurs, leur expression est limitée par la loi. Celle-ci protège les élèves de toute influence religieuse et préserve leur liberté de conscience\n- Nul ne peut être discriminé pour sa croyance ou ses convictions, mais nul n’a Ces non plus le droit d’imposer ses croyances ou ses convictions aux autres.",
    "targetName": "À l’école laïque",
    "objectives": [
     "07ed8b12-82ee-5c65-b2c1-79ea7e237f67",
     "1471d402-1b12-5f0c-ab6e-88a568f7a7e7",
-    "d9690bee-d6a8-5438-9227-2ca8df6d6219"
+    "fe85b0d1-9c54-5e29-99f1-8d3391e34f58"
    ]
   },
   {
@@ -4473,11 +4470,11 @@
    ],
    "name": "Cycle 3 · Éducation musicale · Chanter et interpréter",
    "description": "Atteste que l'élève a atteint les objectifs du programme de éducation musicale au cycle 3 pour « Chanter et interpréter ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Reproduire et interpréter un modèle mélodique et rythmique. 1, 5\n- Interpréter un répertoire varié avec expressivité.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Reproduire et interpréter un modèle mélodique et rythmique.\n- Interpréter un répertoire varié avec expressivité.",
    "targetName": "Chanter et interpréter",
    "objectives": [
     "4789787a-e499-5889-9ab4-169ff5662399",
-    "ff3f42aa-dba4-5157-a4cd-9ee2be80459a",
+    "99b85600-75b0-5535-adb3-d2f786fb4df6",
     "897f04f1-dda6-5075-9a77-6d229e8b2385"
    ]
   },
@@ -4493,12 +4490,12 @@
    ],
    "name": "Cycle 3 · Éducation musicale · Écouter, comparer et commenter",
    "description": "Atteste que l'élève a atteint les objectifs du programme de éducation musicale au cycle 3 pour « Écouter, comparer et commenter ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Décrire et comparer des éléments sonores issus de contextes variés, artistiques ou naturels.\n- Identifier et nommer ressemblances et différences dans deux extraits musicaux. 1, 3, 5\n- Identifier quelques caractéristiques qui inscrivent une œuvre musicale dans une aire géographique ou culturelle et dans un temps historique contemporain, proche ou lointain.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Décrire et comparer des éléments sonores issus de contextes variés, artistiques ou naturels.\n- Identifier et nommer ressemblances et différences dans deux extraits musicaux.\n- Identifier quelques caractéristiques qui inscrivent une œuvre musicale dans une aire géographique ou culturelle et dans un temps historique contemporain, proche ou lointain.",
    "targetName": "Écouter, comparer et commenter",
    "objectives": [
     "5005c61a-c278-5b09-97bf-876ba835f0d4",
     "74622089-33fd-5eed-9cde-28d839b3c651",
-    "9fd283d2-836c-5da7-86ff-600ee94e300c",
+    "c93cb6c1-072c-550d-a0a0-388de7615918",
     "ca7458d4-ac3e-5691-b9c6-cdc7f45902b0"
    ]
   },
@@ -4514,12 +4511,12 @@
    ],
    "name": "Cycle 3 · Éducation musicale · Explorer, imaginer et créer",
    "description": "Atteste que l'élève a atteint les objectifs du programme de éducation musicale au cycle 3 pour « Explorer, imaginer et créer ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Imaginer l’organisation de différents éléments sonores.\n- Faire des propositions personnelles lors de moments de 1, 5 création, d’invention et d’interprétation.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Imaginer l’organisation de différents éléments sonores.\n- Faire des propositions personnelles lors de moments de création, d’invention et d’interprétation.",
    "targetName": "Explorer, imaginer et créer",
    "objectives": [
     "73dc3d2e-3003-5e0f-8235-e68a47319913",
     "ac427e47-dbc8-5faa-8147-9628ff6ca709",
-    "c686e290-5ca7-58eb-8b20-5a0ea1c762bf"
+    "0eecad57-70ea-5239-a0fe-57d61eeb5aeb"
    ]
   },
   {
@@ -4534,12 +4531,12 @@
    ],
    "name": "Cycle 3 · Éducation musicale · Échanger, partager et argumenter",
    "description": "Atteste que l'élève a atteint les objectifs du programme de éducation musicale au cycle 3 pour « Échanger, partager et argumenter ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Argumenter un jugement sur une musique.\n- Écouter et respecter le point de vue des autres et l’expression 1, 3, 5 de leur sensibilité.",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Argumenter un jugement sur une musique.\n- Écouter et respecter le point de vue des autres et l’expression de leur sensibilité.",
    "targetName": "Échanger, partager et argumenter",
    "objectives": [
     "6a46d635-6906-5c75-80ca-e916e2ad8a85",
     "79d26039-509e-5970-9398-e252e32c5190",
-    "f4d1f26a-c047-5cd0-b902-80c231c4c4cb"
+    "16a9f8f7-79c0-57c3-a7e4-626013b041e5"
    ]
   },
   {
@@ -5357,7 +5354,7 @@
    ],
    "name": "Cycle 3 · Français · Identifier les constituants d’une phrase simple",
    "description": "Atteste que l'élève a atteint les objectifs du programme de français au cycle 3 pour « Identifier les constituants d’une phrase simple ».",
-   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Identifier les trois types de phrases (déclaratif, interrogatif, impératif ou injonctif) et comprendre leurs effets dans un texte simple\n- Identifier les principales formes de phrases (négative, exclamative) et comprendre leurs effets dans un texte simple\n- Transformer à l’oral puis à l’écrit des phrases d’un type à un autre, d’une forme à une autre\n- Distinguer et produire différentes réalisations du type interrogatif à l’oral comme à l’écrit, en employant le point d’interrogation et en utilisant diverses tournures ou intonations pour exprimer l’interrogation (inversion du sujet, est-ce que, intonation ascendante à l’oral, etc.)\n- Analyser une phrase simple\n- Consolider l’identification du verbe conjugué\n- Consolider l’identification du groupe sujet\n- Identifier les différents types de sujets (pronoms personnels, groupes nominaux, plusieurs noms)\n- Distinguer le complément d’objet du complément circonstanciel\n- Après s’être assuré de la capacité à identifier le complément d’objet, différencier complément d’objet direct et complément d’objet indirect dans des phrases prototypiques sans ambigüité\n- Identifier les groupes circonstanciels (sans les distinguer)\n- Comprendre et utiliser les manipulations syntaxiques. Elles seront enseignées afin d’en faire des habiletés au service des activités langagières et plus particulièrement pour la production d’écrits et l’étude de la langue : déplacement, suppression (ou effacement), substitution (ou remplacement), addition (ou ajout), encadrement\n- Distinguer les notions de nature ou classe grammaticale et de fonction\n- Se familiariser avec les notions de nature et fonction\n- Identifier les mots, un groupe de mots selon leur nature\n- Identifier et nommer les déterminants suivants : articles définis, indéfinis, déterminants possessifs et démonstratifs\n- Identifier et nommer les conjonctions de coordination\n- Identifier et nommer les adverbes les plus fréquents — [les catégoriser, les compiler au fur et à mesure des rencontres. Leur caractère invariable est souligné]\n- Distinguer les pronoms personnels sujets des pronoms personnels compléments\n- Remplacer un groupe nominal sujet par un pronom personnel sujet\n- Remplacer un groupe nominal objet par un pronom personnel objet\n- Repérer des groupes nominaux dans une phrase simple et nommer les différents éléments qui les constituent : Dét. + Nom\n- Dét. + Nom + Adj. ; Dét. + Adj.+ Nom\n- Repérer et nommer le nom noyau dans le groupe nominal\n- Aborder la notion d’épithète\n- Consolider les objectifs du CM1 avec des corpus de plus en plus complexes\n- Consolider l’identification des différents types de sujets rencontrés au CM1\n- Identifier le sujet inversé dans des cas simples\n- Consolider l’identification du groupe sujet, groupe verbal, groupe circonstanciel\n- Différencier attribut du sujet et complément d’objet\n- Différencier complément d’objet direct et complément d’objet indirect\n- Différencier les compléments circonstanciels de temps, de lieu, de cause\n- Dans le prolongement du CM1, mobiliser les manipulations syntaxiques dans les activités langagières et plus particulièrement lors de la production/amélioration/révision des écrits et dans les activités d’étude de la langue (activités de découverte, exercices d’application et d’entraînement)\n- Distinguer les notions de nature/classe grammaticales et de fonction\n- Cette compétence se consolide en parallèle avec la compétence Analyser une phrase simple\n- Connaître et distinguer les notions de nature et fonction\n- Distinguer les natures/classes grammaticales de mots et les natures des groupes fonctionnels\n- Identifier les mots, un groupe de mots selon leur nature/classe grammaticale\n- Identifier et nommer les prépositions\n- Identifier et nommer les conjonctions de subordination (en lien avec l’introduction des phrases complexes)\n- Reconnaître les deux types de pronoms personnels (sujet, compléments)\n- Identifier les pronoms personnels compléments d’objet\n- Connaître les variations du pronom personnel (personne, nombre, fonction)\n- Analyser le groupe nominal\n- Aborder la notion d’expansion du nom : adjectif et/ou groupe nominal prépositionnel\n- Aborder la notion de complément du nom\n- Différencier épithète et attribut du sujet",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Identifier les trois types de phrases (déclaratif, interrogatif, impératif ou injonctif) et comprendre leurs effets dans un texte simple\n- Identifier les principales formes de phrases (négative, exclamative) et comprendre leurs effets dans un texte simple\n- Transformer à l’oral puis à l’écrit des phrases d’un type à un autre, d’une forme à une autre\n- Distinguer et produire différentes réalisations du type interrogatif à l’oral comme à l’écrit, en employant le point d’interrogation et en utilisant diverses tournures ou intonations pour exprimer l’interrogation (inversion du sujet, est-ce que, intonation ascendante à l’oral, etc.)\n- Analyser une phrase simple\n- Consolider l’identification du verbe conjugué\n- Consolider l’identification du groupe sujet\n- Identifier les différents types de sujets (pronoms personnels, groupes nominaux, plusieurs noms)\n- Distinguer le complément d’objet du complément circonstanciel\n- Après s’être assuré de la capacité à identifier le complément d’objet, différencier complément d’objet direct et complément d’objet indirect dans des phrases prototypiques sans ambigüité\n- Identifier les groupes circonstanciels (sans les distinguer)\n- Comprendre et utiliser les manipulations syntaxiques. Elles seront enseignées afin d’en faire des habiletés au service des activités langagières et plus particulièrement pour la production d’écrits et l’étude de la langue : déplacement, suppression (ou effacement), substitution (ou remplacement), addition (ou ajout), encadrement\n- Distinguer les notions de nature ou classe grammaticale et de fonction\n- Se familiariser avec les notions de nature et fonction\n- Identifier les mots, un groupe de mots selon leur nature\n- Identifier et nommer les déterminants suivants : articles définis, indéfinis, déterminants possessifs et démonstratifs\n- Identifier et nommer les conjonctions de coordination\n- Identifier et nommer les adverbes les plus fréquents — [les catégoriser, les compiler au fur et à mesure des rencontres. Leur caractère invariable est souligné]\n- Distinguer les pronoms personnels sujets des pronoms personnels compléments\n- Remplacer un groupe nominal sujet par un pronom personnel sujet\n- Remplacer un groupe nominal objet par un pronom personnel objet\n- Repérer des groupes nominaux dans une phrase simple et nommer les différents éléments qui les constituent : Dét. + Nom\n- Dét. + Nom + Adj. ; Dét. + Adj.+ Nom\n- Repérer et nommer le nom noyau dans le groupe nominal\n- Aborder la notion d’épithète\n- Consolider les objectifs du CM1 avec des corpus de plus en plus complexes\n- Consolider l’identification des différents types de sujets rencontrés au CM1\n- Identifier le sujet inversé dans des cas simples\n- Consolider l’identification du groupe sujet, groupe verbal, groupe circonstanciel\n- Différencier attribut du sujet et complément d’objet\n- Différencier complément d’objet direct et complément d’objet indirect\n- Différencier les compléments circonstanciels de temps, de lieu, de cause\n- Dans le prolongement du CM1, mobiliser les manipulations syntaxiques dans les activités langagières et plus particulièrement lors de la production/amélioration/révision des écrits et dans les activités d’étude de la langue (activités de découverte, exercices d’application et d’entraînement)\n- Distinguer les notions de nature/classe grammaticales et de fonction\n- Connaître et distinguer les notions de nature et fonction\n- Distinguer les natures/classes grammaticales de mots et les natures des groupes fonctionnels\n- Identifier les mots, un groupe de mots selon leur nature/classe grammaticale\n- Identifier et nommer les prépositions\n- Identifier et nommer les conjonctions de subordination (en lien avec l’introduction des phrases complexes)\n- Reconnaître les deux types de pronoms personnels (sujet, compléments)\n- Identifier les pronoms personnels compléments d’objet\n- Connaître les variations du pronom personnel (personne, nombre, fonction)\n- Analyser le groupe nominal\n- Aborder la notion d’expansion du nom : adjectif et/ou groupe nominal prépositionnel\n- Aborder la notion de complément du nom\n- Différencier épithète et attribut du sujet",
    "targetName": "Identifier les constituants d’une phrase simple",
    "objectives": [
     "d39f9319-2e41-5b09-8e1e-606fa8e409b1",
@@ -5395,7 +5392,6 @@
     "37cb360e-d727-59e3-8cd8-d5c81f120fe0",
     "879d4487-ab0b-5f65-82db-8ee0ef0e1cb1",
     "8473697e-840e-58b3-95fd-5f9de6684fc2",
-    "81b821de-fb6a-5373-8d35-8106b3fe334a",
     "4cd927b8-5aba-56f9-a0ac-13043c1d2f7b",
     "b484a680-ab08-52b8-835d-47d3ac0d0eed",
     "4bbb03e1-cc34-561e-bed8-f99eb60ba1a5",
@@ -5482,6 +5478,82 @@
    "objectives": [
     "c64f53dc-ab20-5586-bb2c-f64d38fb0677",
     "acc15a9f-5dfb-5e4f-9924-22398eed0d1e"
+   ]
+  },
+  {
+   "id": "2a8053e7-b074-5ac6-a8e0-c6924f61887a",
+   "caseItem": "eed64405-1ba2-50d2-81fa-880bb31b61c5",
+   "code": "C3.HDA.1",
+   "cycle": "C3",
+   "subject": "Histoire des arts",
+   "levels": [
+    "CM1",
+    "CM2"
+   ],
+   "name": "Cycle 3 · Histoire des arts · Identifier",
+   "description": "Atteste que l'élève a atteint les objectifs du programme de histoire des arts au cycle 3 pour « Identifier ».",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Donner un avis argumenté sur ce que représente ou exprime une œuvre d’art.",
+   "targetName": "Identifier",
+   "objectives": [
+    "eed64405-1ba2-50d2-81fa-880bb31b61c5",
+    "eb395449-501b-531f-91fb-5c216134c3cc"
+   ]
+  },
+  {
+   "id": "3944e914-8e81-5a80-89a3-71c84c5ea7e0",
+   "caseItem": "1ae15cc2-369b-5fbd-ab7b-afc280da4217",
+   "code": "C3.HDA.2",
+   "cycle": "C3",
+   "subject": "Histoire des arts",
+   "levels": [
+    "CM1",
+    "CM2"
+   ],
+   "name": "Cycle 3 · Histoire des arts · Analyser",
+   "description": "Atteste que l'élève a atteint les objectifs du programme de histoire des arts au cycle 3 pour « Analyser ».",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Dégager d’une œuvre d’art, par l’observation ou l’écoute, ses principales caractéristiques techniques et formelles.",
+   "targetName": "Analyser",
+   "objectives": [
+    "1ae15cc2-369b-5fbd-ab7b-afc280da4217",
+    "43f0adc2-b3d8-5616-a42a-6e27681f79cd"
+   ]
+  },
+  {
+   "id": "90176212-8e4f-5f53-81bf-f4efb3bea192",
+   "caseItem": "263c86c6-7bef-5b9b-8b90-32462a31933d",
+   "code": "C3.HDA.3",
+   "cycle": "C3",
+   "subject": "Histoire des arts",
+   "levels": [
+    "CM1",
+    "CM2"
+   ],
+   "name": "Cycle 3 · Histoire des arts · Situer",
+   "description": "Atteste que l'élève a atteint les objectifs du programme de histoire des arts au cycle 3 pour « Situer ».",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Relier des caractéristiques d’une œuvre d’art à des usages ainsi qu’au contexte historique et culturel de sa création.",
+   "targetName": "Situer",
+   "objectives": [
+    "263c86c6-7bef-5b9b-8b90-32462a31933d",
+    "75d10cdf-f88d-5c04-b3bc-7f2f1d52fbf4"
+   ]
+  },
+  {
+   "id": "e83a5910-b841-5c2e-8f99-2100ff63cc47",
+   "caseItem": "521dab45-ffb7-51d4-a083-b47f14bdb212",
+   "code": "C3.HDA.4",
+   "cycle": "C3",
+   "subject": "Histoire des arts",
+   "levels": [
+    "CM1",
+    "CM2"
+   ],
+   "name": "Cycle 3 · Histoire des arts · Se repérer",
+   "description": "Atteste que l'élève a atteint les objectifs du programme de histoire des arts au cycle 3 pour « Se repérer ».",
+   "criteria": "Un enseignant de l'établissement a constaté que l'élève atteint les objectifs d'apprentissage suivants du programme officiel :\n- Dans un musée, un lieu d’art, un site patrimonial.",
+   "targetName": "Se repérer",
+   "objectives": [
+    "521dab45-ffb7-51d4-a083-b47f14bdb212",
+    "efa39d6c-0957-53e9-a0cb-f032f2b745cb"
    ]
   },
   {
