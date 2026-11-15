@@ -33,7 +33,7 @@ public class BundledCatalogue {
 	private static final String RESOURCE = "catalogue/programmes-1d.json";
 	private static final String CATALOGUE = "programmes-1d";
 	/** Identifiant fixe de l'émetteur de la plateforme : il est inscrit dans chaque badge du catalogue. */
-	private static final String PLATFORM_ISSUER = UUID.nameUUIDFromBytes(
+	public static final String PLATFORM_ISSUER = UUID.nameUUIDFromBytes(
 			"openbadges:platform-issuer".getBytes(StandardCharsets.UTF_8)).toString();
 
 	private final OpenBadgesContext ctx;

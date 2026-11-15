@@ -83,6 +83,12 @@ public class DirectoryService {
 				+ "c.displayName AS displayName ORDER BY displayName", new JsonObject().put("id", parentId));
 	}
 
+	/** L'adresse électronique d'un usager (son identité dans une attestation), ou null. */
+	public Future<String> emailOf(String userId) {
+		return query("MATCH (u:User {id:$id}) RETURN u.email AS email", new JsonObject().put("id", userId))
+				.map(rows -> rows.isEmpty() ? null : rows.getJsonObject(0).getString("email"));
+	}
+
 	private Future<JsonArray> query(String cypher, JsonObject params) {
 		final Promise<JsonArray> promise = Promise.promise();
 		Neo4j.getInstance().execute(cypher, params, Neo4jResult.validResultHandler(

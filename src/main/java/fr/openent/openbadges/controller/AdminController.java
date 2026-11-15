@@ -2,12 +2,12 @@ package fr.openent.openbadges.controller;
 
 import fr.openent.openbadges.OpenBadgesContext;
 import fr.openent.openbadges.api.Http;
-import fr.openent.openbadges.badge.Credentials;
 import fr.openent.openbadges.core.BadgeException;
 import fr.openent.openbadges.core.Uris;
 import fr.openent.openbadges.security.Scopes;
 import fr.openent.openbadges.security.Secrets;
 import fr.openent.openbadges.service.BadgeRepository;
+import fr.openent.openbadges.service.CredentialIssuer;
 import fr.wseduc.rs.Delete;
 import fr.wseduc.rs.Get;
 import fr.wseduc.rs.Post;
@@ -25,9 +25,6 @@ import org.entcore.common.http.filter.SuperAdminFilter;
 import org.entcore.common.user.UserInfos;
 import org.entcore.common.user.UserUtils;
 
-import java.time.LocalDateTime;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -43,8 +40,6 @@ import java.util.UUID;
  */
 public class AdminController extends BaseController {
 
-	private static final DateTimeFormatter SQL_TIMESTAMP =
-			DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
 	private final OpenBadgesContext ctx;
 	private final BadgeRepository repository;
@@ -288,32 +283,7 @@ public class AdminController extends BaseController {
 
 	private Future<JsonObject> sign(JsonObject body, JsonObject achievement, JsonObject issuer,
 									String issuedBy) {
-		final String id = UUID.randomUUID().toString();
-		final String now = LocalDateTime.now(ZoneOffset.UTC).format(SQL_TIMESTAMP);
-		final String email = body.getString("email");
-		final String salt = email == null ? null : Credentials.salt();
-
-		final JsonObject row = new JsonObject()
-				.put("id", id)
-				.put("achievement_id", achievement.getString("id"))
-				.put("issuer_id", issuer.getString("id"))
-				.put("subject_user_id", body.getString("userId"))
-				.put("name", body.getString("name", achievement.getString("name")))
-				.put("narrative", body.getValue("narrative"))
-				.put("identity_type", "emailAddress")
-				.put("identity_hash", Credentials.identityHash(email, salt))
-				.put("identity_salt", salt)
-				.put("valid_from", now)
-				.put("valid_until", body.getValue("validUntil"))
-				.put("created_by", issuedBy);
-
-		final JsonObject credential = ctx.credentials.credential(row, achievement, issuer);
-		final String jws = ctx.keys.sign(
-				ctx.credentials.jwtPayload(credential, System.currentTimeMillis() / 1000L));
-		return repository.insertCredential(row.copy().put("jws", jws))
-				.map(stored -> new JsonObject()
-						.put("credential", credential)
-						.put("compactJwsString", jws));
+		return CredentialIssuer.sign(ctx, body, achievement, issuer, issuedBy);
 	}
 
 	/** Retire une attestation. Elle reste signée : c'est la liste de révocation qui fait foi. */
