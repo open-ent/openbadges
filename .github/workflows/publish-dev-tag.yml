@@ -70,6 +70,13 @@ jobs:
                     <releases><enabled>true</enabled></releases>
                     <snapshots><enabled>true</enabled></snapshots>
                   </repository>
+                  <repository>
+                    <id>pt-releases</id>
+                    <name>rct-nexus maven-releases</name>
+                    <url>https://rct-nexus.tech.fr/repository/maven-releases/</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>false</enabled></snapshots>
+                  </repository>
                 </repositories>
               </profile>
             </profiles>
