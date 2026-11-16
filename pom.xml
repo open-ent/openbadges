@@ -28,11 +28,6 @@
 
     <repositories>
         <repository>
-            <id>ode</id>
-            <name>ODE Repository</name>
-            <url>https://maven.opendigitaleducation.com/nexus/content/groups/public</url>
-        </repository>
-        <repository>
             <id>pt-releases</id>
             <name>rct-nexus maven-releases (entcore-libs patchées)</name>
             <url>https://rct-nexus.tech.fr/repository/maven-releases/</url>
