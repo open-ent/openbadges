@@ -41,7 +41,7 @@
 
     <properties>
         <!-- Bibliothèques entcore patchées, alignées sur le socle déployé (cf. oneroster). -->
-        <entCoreLibsVersion>6.16.8-patched</entCoreLibsVersion>
+        <entCoreLibsVersion>6.16.14-patched</entCoreLibsVersion>
     </properties>
 
     <dependencies>
