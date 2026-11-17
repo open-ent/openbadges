@@ -53,21 +53,23 @@ public class BundledCatalogue {
 	}
 
 	public Future<Void> load() {
-		return read().compose(bytes -> {
-			final String sha = sha256(bytes);
-			return ctx.badges.bundle(RESOURCE).compose(existing -> {
-				if (existing != null && sha.equals(existing.getString("sha256"))) {
-					return Future.<Void>succeededFuture();
-				}
-				final JsonObject catalogue = new JsonObject(new String(bytes, StandardCharsets.UTF_8));
-				final JsonArray badges = withAlignments(catalogue);
-				return ctx.badges.upsertPlatformIssuer(PLATFORM_ISSUER,
-								ctx.config.getString("platform-name", "Open ENT"), ctx.publicBase)
-						.compose(issuer -> ctx.badges.saveCatalogue(RESOURCE, sha, CATALOGUE,
-								issuer.getString("id"), badges))
-						.onSuccess(v -> log.info("[openbadges] catalogue chargé : " + badges.size() + " badges"));
-			});
-		});
+		// L'émetteur plateforme est mis à jour à CHAQUE démarrage, pas seulement quand le catalogue
+		// change : renommer la plateforme (openbadges.platform-name) doit s'appliquer aussi à
+		// l'émetteur déjà créé. Les attestations déjà signées gardent le nom qu'elles portent.
+		return read().compose(bytes -> ctx.badges.upsertPlatformIssuer(PLATFORM_ISSUER,
+						ctx.config.getString("platform-name", "Open ENT"), ctx.publicBase)
+				.compose(issuer -> {
+					final String sha = sha256(bytes);
+					return ctx.badges.bundle(RESOURCE).compose(existing -> {
+						if (existing != null && sha.equals(existing.getString("sha256"))) {
+							return Future.<Void>succeededFuture();
+						}
+						final JsonObject catalogue = new JsonObject(new String(bytes, StandardCharsets.UTF_8));
+						final JsonArray badges = withAlignments(catalogue);
+						return ctx.badges.saveCatalogue(RESOURCE, sha, CATALOGUE, issuer.getString("id"), badges)
+								.onSuccess(v -> log.info("[openbadges] catalogue chargé : " + badges.size() + " badges"));
+					});
+				}));
 	}
 
 	/** L'alignement vers l'énoncé du référentiel, à l'adresse publique du module case. */
